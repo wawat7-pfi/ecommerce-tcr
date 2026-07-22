@@ -1,0 +1,77 @@
+.ecomus-testimonial-carousel-3__item {
+    padding: 28px 24px 40px 34px;
+    background-color: #fff;
+    border-radius: var( --em-rounded-md );
+}
+
+.ecomus-testimonial-carousel-3__name-group {
+    gap: 14px;
+    margin-bottom: 19px;
+}
+
+.ecomus-testimonial-carousel-3__name {
+    color: var(--em-color__dark);
+}
+
+.ecomus-testimonial-carousel-3__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    @include font-size(12/16);
+    padding: 6px 16px;
+    background-color: var(--em-color__dark);
+    color: var(--em-color__light);
+
+    .ecomus-svg-icon {
+        @include font-size(10/16);
+    }
+}
+
+.ecomus-testimonial-carousel-3__rating {
+    margin-bottom: 16px;
+
+    &.star-rating {
+        --em-rating-spacing: 7px;
+
+        @include font-size(15/16);
+    }
+}
+
+.ecomus-testimonial-carousel-3__title {
+    @include font-size(18/16);
+    color: var(--em-color__dark);
+    margin-bottom: 8px;
+}
+
+.ecomus-testimonial-carousel-3__content {
+    color: var(--em-color__dark);
+}
+
+.elementor-widget-ecomus-testimonial-carousel-3 {
+    &:hover {
+        .swiper-button {
+            opacity: 1;
+
+            &.elementor-swiper-button-prev {
+				margin-left: 0;
+			}
+
+			&.elementor-swiper-button-next {
+				margin-right: 0;
+			}
+        }
+    }
+
+    .swiper-button {
+		opacity: 0;
+
+
+		&.elementor-swiper-button-prev {
+			margin-left: 20px;
+		}
+
+		&.elementor-swiper-button-next {
+			margin-right: 20px;
+		}
+	}
+}

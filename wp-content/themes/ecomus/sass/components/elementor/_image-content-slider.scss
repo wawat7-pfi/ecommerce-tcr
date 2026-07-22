@@ -1,0 +1,96 @@
+.elementor-element.elementor-widget-ecomus-image-content-slider {
+    .ecomus-image-content-slider {
+        .swiper-pagination.swiper-pagination-horizontal {
+            position: absolute;
+			margin-top: 0;
+            bottom: var(--em-swiper-pagination-spacing);
+        }
+    }
+}
+
+.ecomus-image-content-slider {
+    --em-content-slider-spacing-left: max( 50px, calc( ( 100vw - 1440px ) / 2 ) );
+
+    .swiper-pagination {
+        --em-swiper-pagination-spacing: 72px;
+        
+        padding-left: var(--em-content-slider-spacing-left);
+        text-align: left;
+    }
+}
+
+.ecomus-image-content-slider__item {
+    position: relative;
+    background-color: #eef1e0;
+
+    > * {
+        width: 50%;
+    }
+
+    &.swiper-slide-active {
+		.ecomus-image-content-slider__title,
+		.ecomus-image-content-slider__description,
+		.ecomus-image-content-slider__button {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+.ecomus-image-content-slider__content {
+    padding-left: var(--em-content-slider-spacing-left);
+    padding-right: 1%;
+}
+
+.ecomus-image-content-slider__title,
+.ecomus-image-content-slider__description,
+.ecomus-image-content-slider__button {
+    --em-transition-delay: .5s;
+
+    opacity: 0;
+    transform: translateY(100px);
+    transition: transform .3s, opacity .01s;
+    transition-delay: var(--em-transition-delay);
+}
+
+.ecomus-image-content-slider__title {
+    @include font-size(80/16);
+    line-height: normal;
+    color: var(--em-color__dark);
+    margin-bottom: 14px;
+}
+
+.ecomus-image-content-slider__description {
+    --em-transition-delay: .9s;
+
+    @include font-size(20/16);
+    color: var(--em-color__dark);
+    margin-bottom: 44px;
+}
+
+.ecomus-image-content-slider__button {
+    --em-button-font-size: 18px;
+    --em-button-padding-left: 31.5px;
+	--em-button-padding-right: 31.5px;
+    --em-button-padding-top: 15.5px;
+    --em-button-padding-bottom: 15.5px;
+    --em-transition-delay: .95s;
+    --em-button-icon-size: 11px;
+
+    position: relative;
+    z-index: 3;
+}
+
+.ecomus-image-content-slider__image {
+    --em-image-rounded: 0;
+    height: 854px;
+}
+
+.ecomus-image-content-slider__button--all {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}

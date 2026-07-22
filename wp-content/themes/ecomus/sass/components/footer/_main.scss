@@ -1,0 +1,36 @@
+.footer-main-container {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	padding-top: var(--em-footer-main-top-spacing);
+	padding-bottom: var(--em-footer-main-bottom-spacing);
+
+	.footer-main.has-divider & {
+		border-top: 1px solid var(--em-footer-main-border-color);
+	}
+}
+
+.footer-items {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.footer-left {
+	flex: 1;
+	justify-content: flex-start;
+	text-align: left;
+}
+
+.footer-right {
+	flex: 1;
+	justify-content: flex-end;
+	text-align: right;
+}
+
+.footer-payments {
+	ul {
+		display: flex;
+		gap: 10px;
+	}
+}

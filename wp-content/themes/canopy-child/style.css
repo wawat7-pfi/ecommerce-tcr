@@ -1,0 +1,48 @@
+/*
+Theme Name: Canopy Child
+Theme URI: https://thecanopy-room.com/
+Author: The Canopy Room
+Author URI: https://thecanopy-room.com/
+Description: Child theme of Ecomus for The Canopy Room. Reconstructed from public assets during the WordPress.com -> self-hosted migration. Original child theme on WP.com was "82cart Child - Level 1 - General" (dir: ecomus-child). This bundles the recovered child-theme stylesheet rules plus the Customizer "Additional CSS" (see custom.css). NOTE: any functions.php PHP logic and template (.php) overrides from the original child theme are NOT recoverable from public HTTP and require SFTP/backup.
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 6.7
+Requires PHP: 7.0
+License: GNU General Public License v2+
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: canopy-child
+Template: ecomus
+Tags: one-column, two-columns, left-sidebar, right-sidebar, full-width-template, post-formats, theme-options, threaded-comments, translation-ready
+*/
+
+/* ============================================================
+   The Canopy Room - Child theme reconstructed stylesheet
+   ------------------------------------------------------------
+   This file re-enqueues the parent (Ecomus) style and the
+   recovered custom rules. The bulk of the visual customization
+   lives in the recovered rules imported below.
+
+   Load order recommendation (in functions.php, needs SFTP to add):
+     1. ecomus parent style
+     2. this style.css (child header rules below)
+     3. custom.css  (recovered child stylesheet + Customizer Additional CSS)
+   ============================================================ */
+
+@import url("custom.css");
+
+/* ------------------------------------------------------------
+   Brand palette recovered from live site (see NOTES.md)
+   Primary brand red .......... #DB1215  (links hover, sale price, social)
+   Dark / UI (dominant) ....... #000000  (borders, prices, badges, buttons)
+   Light / background ......... #FFFFFF
+   Newsletter input underline . #DDDDCF  (soft sage/off-white accent)
+   Fonts: Roboto (body/UI), Roboto Slab (headings) - Elementor local Google Fonts
+   ------------------------------------------------------------ */
+:root {
+    --canopy-color-primary: #DB1215;
+    --canopy-color-dark: #000000;
+    --canopy-color-light: #FFFFFF;
+    --canopy-color-accent: #DDDDCF;
+    --canopy-font-body: "Roboto", sans-serif;
+    --canopy-font-heading: "Roboto Slab", serif;
+}

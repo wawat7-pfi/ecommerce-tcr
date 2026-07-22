@@ -1,0 +1,56 @@
+.ecomus-hero-images {
+    --em-button-padding-top: 16px;
+    --em-button-padding-right: 30px;
+    --em-button-padding-bottom: 15px;
+    --em-button-padding-left: 30px;
+    --em-button-font-size: 18px;
+    --em-button-icon-spacing: 12px;
+
+    .ecomus-button {
+        font-weight: 500;
+
+        .ecomus-svg-icon {
+            @include font-size(11/16);
+            padding-bottom: 0;
+        }
+    }
+
+    &.ecomus-hero-images--hover-stop {
+        &:hover {
+            .ecomus-marquee--inner {
+                animation-play-state: paused;
+            }
+        }
+    }
+}
+
+.ecomus-hero-images__image {
+    &::before {
+        width: 640px;
+    }
+}
+
+.ecomus-hero-images__summary {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+}
+
+.ecomus-hero-images__content {
+    min-width: 546px;
+    padding: 80px 44px;
+    background-color: #f4eddb;
+    border-radius: var( --em-rounded-md );
+}
+
+.ecomus-hero-images__subtitle {
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.ecomus-hero-images__title {
+    margin-top: 0;
+    margin-bottom: 36px;
+}

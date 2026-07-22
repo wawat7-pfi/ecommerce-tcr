@@ -1,0 +1,241 @@
+.single-product {
+	div.product {
+		.woocommerce-tabs {
+			margin-bottom: 84px;
+			border: 1px solid var(--em-border-color);
+			border-radius: var(--em-rounded-xs);
+
+			.wc-tabs {
+				display: flex;
+				gap: 50px;
+				padding: 0 38px;
+				margin: 0;
+				list-style: none;
+				border-bottom: 1px solid var(--em-border-color);
+				white-space: nowrap;
+
+				li {
+					a {
+						display: inline-block;
+						position: relative;
+						@include font-size(18/16);
+						font-weight: 600;
+						color: $color__dark;
+						padding: 14px 0 12.5px;
+
+						&::after {
+							position: absolute;
+							display: inline-block;
+							content: '';
+							left: 0;
+							bottom: 0;
+							width: 0;
+							height: 2px;
+							background-color: $color__dark;
+							transition: .4s ease;
+						}
+
+						&:hover {
+							color: var(--em-color__primary);
+						}
+					}
+
+					&.active {
+						a {
+							&::after {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+			.wc-tab {
+				padding: 35px;
+
+				> h2 {
+					&:first-child {
+						display: none;
+					}
+				}
+
+				> * {
+					&:first-child {
+						margin-top: 0;
+					}
+
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			table {
+				border-spacing: 0;
+    			border-collapse: collapse;
+				border-radius: var(--em-rounded-xs);
+
+				th,td {
+					border: 1px solid var(--em-border-color);
+					@include font-size(14/16);
+					padding: 10px;
+					vertical-align: middle;
+
+					p {
+						margin: 0;
+					}
+				}
+
+				th {
+					font-weight: 600;
+					text-transform: capitalize;
+					color: var(--em-color__dark);
+				}
+			}
+
+			.woocommerce-Tabs-panel > * {
+				animation: fadeIn 0.8s;
+			}
+
+			&.wc-tabs-wrapper {
+				> * {
+					&:not(.wc-tabs) {
+						display: none;
+
+						&:nth-child(2) {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+
+		.ecomus-woocommerce-tabs {
+			border: none;
+			padding: 0;
+
+			.woocommerce-tabs-title {
+				@include font-size(18/16);
+			}
+		}
+
+		.woocommerce-tabs--dropdown {
+			.woocommerce-tabs-title {
+				position: relative;
+				line-height: 30px;
+				padding: 14px 20px;
+				background-color: #F5F5F5;
+				cursor: pointer;
+				border-radius: 5px;
+
+				&:before,
+				&:after {
+					content: "";
+					position: absolute;
+					background-color: var(--em-color__dark);
+					transform: translateY(-50%) rotate(-90deg);
+					top: 50%;
+					right: 26px;
+					border-radius: var( --em-rounded-xs );
+					transition: transform .25s ease-in-out, opacity .25s ease-in-out, -webkit-transform .25s ease-in-out;
+				}
+
+				&:before {
+					width: 14px;
+					height: 2px;
+					right: 20px;
+				}
+
+				&:after {
+					width: 2px;
+					height: 14px;
+				}
+
+				&:hover {
+					color: var(--em-color__primary);
+				}
+
+				&.active {
+					&:before {
+						opacity: 0;
+					}
+
+					&:after {
+						transform: translateY(-50%) rotate(90deg);
+					}
+				}
+			}
+
+			.woocommerce-tabs-content {
+				display: none;
+				padding: 30px;
+				margin-top: 18px;
+				border: 1px solid var(--em-border-color);
+				border-radius: 5px;
+			}
+
+			&.wc-tabs-first--opened {
+				.woocommerce-tabs-title.active + .woocommerce-tabs-content {
+					display: block;
+				}
+			}
+
+			&:not(.last) {
+				margin-bottom: 18px;
+			}
+		}
+
+		.woocommerce-tabs-content {
+			> h2 {
+				&:first-child {
+					display: none;
+				}
+			}
+		}
+
+		.woocommerce-tabs--list {
+			.woocommerce-tabs-title {
+				padding: 15px 0;
+				line-height: 20px;
+				border-bottom: 1px solid var(--em-border-color);
+			}
+
+			.woocommerce-tabs-content {
+				padding: 30px 0;
+
+				> p:nth-child(2) {
+					margin-top: 0;
+				}
+
+				> *:last-child {
+					margin-bottom: 0;
+				}
+			}
+
+			&:not(.last) {
+				margin-bottom: 20px;
+			}
+		}
+
+		&:not(.woocommerce-tabs--vertical) {
+			.woocommerce-tabs {
+				.wc-tabs {
+					@include scrollbar();
+					overflow-y: hidden;
+					overflow-x: auto;
+				}
+			}
+		}
+
+		&.woocommerce-tabs--vertical {
+			.woocommerce-tabs {
+				border: none;
+			}
+
+			.wc-tab {
+				border: 1px solid var(--em-border-color);
+				border-radius: 5px;
+			}
+		}
+	}
+}

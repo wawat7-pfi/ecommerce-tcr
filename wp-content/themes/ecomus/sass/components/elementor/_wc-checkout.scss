@@ -1,0 +1,22 @@
+.ecomus-woocommerce-checkout-elementor {
+    select {
+        width: 100%;
+    }
+    
+    .ecomus-content-additional {
+        margin-top: 30px;
+    }
+    
+    &.columns-1 {
+        .col2-set {
+            padding: 0;
+        }
+
+        .col2-set,
+        .woocommerce-checkout-review-order,
+        .ecomus-content-additional {
+            float: none;
+            width: 100%;
+        }
+    }
+}

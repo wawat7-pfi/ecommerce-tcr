@@ -1,0 +1,43 @@
+.site-footer-dark {
+	--em-heading-color: var( --em-color__light );
+	--em-color__base: #A1A1A1;
+	--em-color__dark: #A1A1A1;
+	--em-link-color: #A1A1A1;
+	--em-input-bg-color: #2C2C2C;
+	--em-input-border-color: #2C2C2C;
+	--em-input-color: var( --em-color__light );
+	background-color: #000;
+	color: #A1A1A1;
+
+	.footer-widgets.has-divider .footer-widgets-container {
+		--em-footer-widget-border-color: var( --em-color__dark );
+	}
+
+	.footer-main.has-divider {
+		--em-footer-main-border-color: #303030;
+	}
+
+	.ecomus-widget__social-links .social-links a.social {
+		--em-color__dark: #A1A1A1;
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+.site-footer-gray {
+	background-color: #F6F6F6;
+
+	.footer-widgets.has-divider {
+		--em-footer-widget-border-color: transparent;
+	}
+}
+
+.site-footer-custom {
+	background-size: cover;
+
+	.footer-widgets.has-divider {
+		--em-footer-widget-border-color: transparent;
+	}
+}

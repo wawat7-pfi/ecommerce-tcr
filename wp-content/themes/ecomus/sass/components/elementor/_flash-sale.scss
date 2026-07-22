@@ -1,0 +1,144 @@
+.ecomus-flash-sale-carousel {
+	--em-image-rounded-product-card: 10px;
+
+	border: 2px solid #DB1215;
+	border-radius: var( --em-rounded-md );
+	padding: 60px 40px;
+
+	ul.products {
+		li.product {
+			height: auto;
+
+			.product-inner {
+				height: 100%;
+				border: 1px solid #ececec;
+				padding: 10px 10px 30px;
+			}
+
+			.product-summary {
+				padding-left: 5px;
+				padding-right: 5px;
+
+				.product-loop-button-atc {
+					--em-button-height: auto;
+					--em-button-width: auto;
+
+					.ecomus-svg-icon {
+						display: none;
+					}
+
+					.add-to-cart__text {
+						display: inline-block;
+						font-size: inherit;
+						font-weight: inherit;
+						text-transform: inherit;
+					}
+				}
+			}
+		}
+
+		&.product-card-mobile-show-atc li.product {
+			.product-featured-icons {
+				--em-button-rounded: 3px;
+				--em-button-gap: 13px;
+			}
+		}
+	}
+}
+
+.ecomus-flash-sale-carousel__title {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+	position: absolute;
+	top: -25px;
+	left: 0;
+	background-color: var( --em-color__light );
+	color: #DB1215;
+	padding: 4px 30px;
+	margin-left: 55px;
+
+	h4,
+	.h4 {
+		margin: 0;
+		color: inherit;
+	}
+
+	.ecomus-svg-icon {
+		@include font-size(31/16);
+	}
+}
+
+.ecomus-sold-text-position--above {
+	.deal-progress {
+		display: flex;
+		flex-direction: column;
+
+		.deal-available,
+		.deal-text {
+			@include font-size(12/16);
+			font-weight: 600;
+		}
+	}
+
+	.deal-content {
+		order: 1;
+		margin-bottom: 7px;
+	}
+
+	.progress-bar {
+		order: 2;
+		margin-bottom: 0;
+	}
+}
+
+.ecomus-countdown-below--yes {
+	.product-summary {
+		.em-product-countdown {
+			margin-top: 32px;
+
+			.ecomus-countdown {
+				display: flex;
+				justify-content: center;
+				gap: 13px;
+			}
+
+			.timer{
+				text-align: center;
+				color: var(--em-color__dark);
+				background-color: var(--em-color__light);
+				position: relative;
+				padding: 13px 0 9px;
+				min-width: 60px;
+				border-radius: var(--em-rounded-xs);
+
+				.text{
+					display: block;
+					@include font-size(10/16);
+					font-weight: 700;
+					text-transform: uppercase;
+				}
+			}
+
+			.digits{
+				@include font-size(26/16);
+				line-height: 1;
+				font-weight: 500;
+				display: block;
+				min-width: 15px;
+				margin-bottom: 4px;
+			}
+
+			.days,
+			.weeks {
+				.digits{
+					min-width: auto;
+				}
+			}
+
+			.divider{
+				display: none;
+			}
+		}
+	}
+}

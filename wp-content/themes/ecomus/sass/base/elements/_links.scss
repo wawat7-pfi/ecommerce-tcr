@@ -1,0 +1,15 @@
+a {
+	color: var(--em-link-color);
+	text-decoration: none;
+	transition: 0.4s;
+
+	&:focus {
+		outline: 0;
+	}
+
+	&:hover,
+	&:active {
+		outline: 0;
+		color: var(--em-link-color-hover);
+	}
+}

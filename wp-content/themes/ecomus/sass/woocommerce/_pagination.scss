@@ -1,0 +1,77 @@
+.woocommerce-pagination {
+	text-align: center;
+	margin-top: 15px;
+
+	ul {
+		display: flex;
+		justify-content: center;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		flex-wrap: wrap;
+		gap: 10px;
+
+		.page-numbers {
+			@include button();
+			@include button-outline();
+			@include button-icon();
+			--em-button-font-size: 14px;
+			position: relative;
+
+			&.current {
+				--em-button-bg-color: var(--em-color__dark);
+				--em-button-border-color: var(--em-color__dark);
+				--em-button-color: var(--em-color__light);
+			}
+
+			&.current {
+				box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+
+				&:hover,
+				&:focus,
+				&:focus-visible {
+					outline: none;
+				}
+
+				&:after {
+					display: none;
+				}
+			}
+
+			&.dots {
+				cursor: pointer;
+				border: none;
+				position: relative;
+				bottom: 5px;
+			}
+
+			&.prev,
+			&.next {
+				--em-button-icon-size: 11px;
+				@include font-size(11/16);
+			}
+		}
+	}
+}
+
+.woocommerce-pagination-button {
+	&.em-loading-spin {
+		--em-animation-state: paused;
+
+		&::before {
+			opacity: 0;
+		}
+	}
+
+	&.loading {
+		--em-animation-state: running;
+
+		span {
+			opacity: 0;
+		}
+
+		&::before {
+			opacity: 1;
+		}
+	}
+}

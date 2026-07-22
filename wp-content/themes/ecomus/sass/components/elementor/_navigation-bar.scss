@@ -1,0 +1,52 @@
+.elementor-widget-ecomus-navigation-bar {
+	height: 100%;
+}
+
+.ecomus-navigation-bar {
+	display: flex;
+	flex-direction: column;
+	border: 1px solid var( --em-border-color );
+	border-radius: var( --em-rounded-md );
+	max-width: 460px;
+	width: 100%;
+	padding: 25px 38px 32px 38px;
+}
+
+.ecomus-navigation-bar__title {
+	@include font-size(20/16);
+	font-weight: 500;
+	color: var( --em-color__dark );
+	margin: 0;
+	padding: 12px 20px 12px 0;
+	border-bottom: 1px solid var( --em-border-color );
+	position: relative;
+	transition: 0.4s;
+
+	&:last-child {
+		border-bottom: none;
+	}
+
+	&:hover,
+	&.active {
+		border-color: var( --em-color__dark );
+
+		.ecomus-navigation-bar__icon {
+			right: 0;
+			opacity: 1;
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+.ecomus-navigation-bar__icon {
+	@include font-size(8/16);
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 16px;
+	opacity: 0;
+	transition: 0.4s;
+}

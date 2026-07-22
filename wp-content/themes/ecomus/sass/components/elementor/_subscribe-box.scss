@@ -1,0 +1,155 @@
+.ecomus-subscribe-box__type-row {
+	.ecomus-subscribe-box__content {
+		.mc4wp-form-fields {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 9px;
+
+			input:not([type="submit"]) {
+				margin: 0;
+				flex: 1;
+			}
+		}
+	}
+}
+
+.ecomus-subscribe-box__content {
+	.mc4wp-form-fields {
+		display: flex;
+		flex-direction: column;
+
+		button {
+			font-weight: 600;
+		}
+
+		.ecomus-svg-icon {
+			display: none;
+		}
+	}
+
+	input[type="email"] {
+		margin-bottom: 20px;
+	}
+
+	&.ecomus-subscribe-box__type-row {
+		--em-input-padding-y: 1.1rem;
+
+		.mc4wp-form-fields {
+			position: relative;
+
+			.ecomus-svg-icon {
+				display: block;
+			}
+		}
+
+		input[type="email"] {
+			width: 100%;
+			margin-bottom: 0;
+			padding-right: 133px;
+		}
+
+		button,
+		input[type="submit"] {
+			--em-button-padding-top: 12px;
+			--em-button-padding-bottom: 12px;
+			--em-button-padding-right: 18px;
+			--em-button-padding-left: 18px;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 8px;
+		}
+
+		p {
+			margin-top: 0;
+		}
+	}
+
+	.mc4wp-alert {
+		@include font-size(13/14);
+		padding: 10px 15px;
+		margin: 10px 0;
+		border-radius: var(--em-input-rounded);
+
+		p {
+			margin: 0;
+		}
+	}
+
+	.mc4wp-success {
+		background-color: #E8F0E9;
+		color: #428445;
+	}
+
+	.mc4wp-warning {
+		background-color: #FBF6EA;
+		color: #E0B252;
+	}
+
+	.mc4wp-error {
+		background-color: #FDE0E4;
+		color: #EB001B;
+	}
+}
+
+.ecomus-subscribe-box__title {
+	@include font-size(18/16);
+	color: var(--em-heading-color);
+	margin: 0 0 25px;
+
+	&.active {
+		.ecomus-subscribe-box__icon-default {
+			opacity: 0;
+		}
+
+		.ecomus-subscribe-box__icon-active {
+			opacity: 1;
+		}
+	}
+}
+
+.ecomus-subscribe-box__description {
+	margin: 0 0 25px;
+}
+
+.ecomus-subscribe-box__currency-language {
+	gap: 45px;
+	margin-top: 24px;
+}
+
+.ecomus-subscribe-box__dropdown-position-top {
+	.ecomus-currency-language {
+		.current {
+			color: var(--em-color__dark);
+			&:before {
+				bottom: auto;
+				top: -8px;
+			}
+		}
+		.currency-dropdown {
+			top: auto;
+			bottom: 100%;
+		}
+	}
+}
+
+.ecomus-subscribe-box__icon {
+	@include font-size(12/16);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	border-radius: 50%;
+	display: inline-flex;
+	transition: .3s;
+
+	i, svg {
+		transition: .3s;
+	}
+}
+
+.ecomus-subscribe-box__icon-active {
+	opacity: 0;
+}

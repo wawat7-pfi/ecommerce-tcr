@@ -1,0 +1,253 @@
+.ecomus-products-carousel {
+	ul.products {
+		li.product {
+			height: auto;
+
+			.product-inner {
+				height: 100%;
+
+				.woocommerce-LoopProduct-link {
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	.swiper-button {
+		opacity: 0;
+
+		&.elementor-swiper-button-prev {
+			margin-left: 20px;
+		}
+
+		&.elementor-swiper-button-next {
+			margin-right: 20px;
+		}
+    }
+
+    &:hover {
+        .swiper-button {
+			opacity: 1;
+
+			&.elementor-swiper-button-prev {
+				margin-left: 0;
+			}
+
+			&.elementor-swiper-button-next {
+				margin-right: 0;
+			}
+        }
+    }
+}
+
+.ecomus-products-carousel__heading-display-between {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 20px;
+	margin-bottom: 49px;
+
+	h4,
+	.h4 {
+		margin: 0;
+	}
+
+	.swiper-button {
+		@include font-size(8/16);
+		position: static;
+		display: inline-flex;
+		transform: none;
+		width: 30px;
+		height: 30px;
+		margin-left: 6px;
+		opacity: 1;
+		border-radius: var(--em-arrow-rounded);
+	}
+
+	.swiper-button.elementor-swiper-button-prev {
+		margin-left: 0;
+	}
+
+	.swiper-button.elementor-swiper-button-next {
+		margin-right: 0;
+	}
+}
+
+.ecomus-products-carousel__heading-display-center {
+	margin-bottom: 60px;
+
+	.swiper-arrows {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 16px;
+	}
+
+	.ecomus-products-carousel__title {
+		@include font-size(12/16);
+		font-weight: 600;
+		text-transform: uppercase;
+		margin: 0;
+
+		a {
+			line-height: 1;
+			position: relative;
+			padding: 0 0 5px 0;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 1px;
+				background-color: var(--em-link-color);
+				transition: 0.4s;
+			}
+
+			&:hover {
+				&:after {
+					content: '';
+					position: absolute;
+					left: 0;
+					bottom: 0;
+					width: 100%;
+					height: 1px;
+					background-color: var(--em-link-color-hover);
+				}
+			}
+		}
+	}
+
+	.swiper-button {
+		--em-arrow-color-hover: var(--em-color__primary);
+
+		@include font-size(14/16);
+		text-align: center;
+		position: static;
+		transform: none;
+		padding-top: 2px;
+		margin-left: 0;
+		opacity: 1;
+		cursor: pointer;
+		transition: 0.4s;
+		display: inline-flex;
+	}
+
+	.elementor-swiper-button-next {
+		margin-right: 0;
+	}
+}
+
+.ecomus-addtocart-button-show--yes {
+	.ecomus-button {
+		min-width: 100%;
+	}
+
+	ul.products {
+		li.product {
+			.product-inner {
+				.product-featured-icons {
+					.product-loop-button-atc {
+						display: none;
+					}
+
+					&:not(.no-atc) {
+						&.product-featured-icons--no-spacing .product-loop-button:nth-child(3) {
+							border-radius: var(--em-button-rounded-product-card-xs) 0 0 var(--em-button-rounded-product-card-xs);
+						}
+					}
+				}
+			}
+
+			.product-loop-button-atc {
+				--em-button-height: auto;
+				--em-button-width: auto;
+			}
+		}
+
+		&.product-card-button-atc-transfrom--top {
+			li.product {
+				.product-summary {
+					transform: translateY(0);
+					z-index: 2;
+				}
+
+				.product-loop-button-atc {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: auto;
+				}
+			}
+		}
+
+		&.product-card-button-atc-transfrom--bottom {
+			li.product {
+				.product-loop-button-atc {
+					position: static;
+					visibility: visible;
+					opacity: 1;
+					transform: none;
+				}
+			}
+		}
+
+		&.product-card-mobile-show-atc li.product {
+			.product-loop-button-atc {
+				display: inline-flex;
+			}
+		}
+	}
+}
+
+.ecomus-products-carousel-align--center {
+	ul.products {
+		li.product {
+			.product-summary {
+				text-align: center;
+
+				> * {
+					justify-content: center;
+				}
+			}
+		}
+	}
+}
+
+.ecomus-products-carousel-align--right {
+	ul.products {
+		li.product {
+			.product-summary {
+				text-align: right;
+
+				> * {
+					justify-content: flex-end;
+				}
+
+				.product-variation-items {
+					display: inline-flex;
+				}
+			}
+		}
+	}
+}
+
+.ecomus-products-carousel-border-yes {
+	ul.products {
+		li.product {
+			.product-thumbnail {
+				&:before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					border: 1px solid var(--em-color__dark);
+					border-radius: var(--em-image-rounded-product-card);
+					z-index: 1;
+				}
+			}
+		}
+	}
+}

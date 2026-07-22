@@ -1,0 +1,209 @@
+.ecomus-slides-elementor {
+	.ecomus-slides-elementor__item {
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: '';
+			display: block;
+			top: 0;
+			right: 0;
+			left: 0;
+			bottom: 0;
+			pointer-events: none;
+		}
+	}
+
+	.ecomus-slide {
+		height: 100%;
+		align-items: center;
+	}
+
+	.ecomus-slide__content {
+		position: relative;
+		pointer-events: none;
+		z-index: 3;
+	}
+
+	.ecomus-slide__before-title,
+	.ecomus-slide__title,
+	.ecomus-slide__description,
+	.ecomus-slide__sub-description,
+	.ecomus-slide__button {
+		--em-transition-delay: .5s;
+
+		opacity: 0;
+		transform: translateY(100px);
+		transition: transform .3s, opacity .01s;
+		transition-delay: var(--em-transition-delay);
+	}
+
+	.ecomus-slide__before-title {
+		--em-transition-delay: .3s;
+
+		display: inline-block;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: var(--em-color__dark);
+		margin-bottom: 13px;
+	}
+
+	.ecomus-slide__title {
+		@include font-size(80/16);
+		line-height: normal;
+		color: var(--em-color__dark);
+		margin-bottom: 14px;
+		margin-top: 0;
+	}
+
+	.ecomus-slide__description {
+		--em-transition-delay: .9s;
+
+		@include font-size(20/16);
+		color: var(--em-color__dark);
+		margin-bottom: 44px;
+	}
+
+	.ecomus-slide__sub-description {
+		--em-transition-delay: .9s;
+
+		@include font-size(16/16);
+		color: var(--em-color__dark);
+		gap: 10px;
+		margin-top: -42px;
+		margin-bottom: 44px;
+
+		.star-rating {
+			--em-rating-spacing: 8px;
+
+			@include font-size(18/16);
+
+			.user-rating {
+				color: #FF8A00;
+			}
+		}
+	}
+
+	.ecomus-slide__sub-description--text {
+		margin-top: 2px;
+	}
+
+	.ecomus-slide__button {
+		--em-button-font-size: 18px;
+		--em-button-padding-right: 33px;
+		--em-button-padding-left: 33px;
+		--em-button-padding-top: 16px;
+		--em-button-padding-bottom: 16px;
+		--em-transition-delay: .95s;
+
+		font-weight: 500;
+		pointer-events: auto;
+
+		.ecomus-svg-icon {
+			@include font-size(11/16);
+		}
+
+		&.em-button-subtle,
+    	&.em-button-text {
+        --em-button-padding-left: 0;
+        --em-button-padding-right: 0;
+        --em-button-padding-top: 0;
+        --em-button-padding-bottom: 3px;
+    	}
+	}
+
+	.swiper-pagination {
+		--em-swiper-pagination-spacing: 57px;
+
+		position: absolute;
+		margin-top: 0;
+		text-align: left;
+
+		/*rtl:ignore*/
+		right: 0;
+
+		bottom: var(--em-swiper-pagination-spacing) !important;
+	}
+
+	div.swiper-slide-active {
+		.ecomus-slide__content,
+		.ecomus-slide__before-title,
+		.ecomus-slide__title,
+		.ecomus-slide__description,
+		.ecomus-slide__sub-description,
+		.ecomus-slide__button {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.ecomus-slide__content-background {
+		.ecomus-slide__content {
+			opacity: 0;
+			transform: translateY(100px);
+			transition: transform .3s, opacity .01s;
+			transition-delay: .5s;
+		}
+
+		.ecomus-slide__before-title {
+			--em-transition-delay: .8s;
+		}
+
+		.ecomus-slide__title {
+			--em-transition-delay: 1s;
+		}
+
+		.ecomus-slide__description {
+			--em-transition-delay: 1.2s;
+		}
+
+		.ecomus-slide__sub-description {
+			--em-transition-delay: 1.2s;
+		}
+
+		.ecomus-slide__button {
+			--em-transition-delay: 1.25s;
+		}
+	}
+
+	.ecomus-slide__button--all {
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+	}
+}
+
+.ecomus-slides__dots-position-right {
+	.swiper-pagination-bullets {
+		display: inline-flex;
+	}
+}
+
+@media (min-width: 1640px) {
+	.elementor .elementor-element .ecomus-slides-elementor.ecomus-slides__arrows-large--yes .swiper-arrows{
+		.elementor-swiper-button-prev {
+			left: var(--arrows-horizontal-large-spacing);
+		}
+
+		.elementor-swiper-button-next {
+			right: var(--arrows-horizontal-large-spacing);
+		}
+	}
+
+	.rtl {
+		.elementor .elementor-element .ecomus-slides-elementor.ecomus-slides__arrows-large--yes .swiper-arrows{
+			.elementor-swiper-button-prev {
+				right: auto;
+				left: var(--arrows-horizontal-large-spacing);
+			}
+	
+			.elementor-swiper-button-next {
+				left: auto;
+				right: var(--arrows-horizontal-large-spacing);
+			}
+		}
+	}
+
+}

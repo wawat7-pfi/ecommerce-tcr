@@ -1,0 +1,89 @@
+.ecomus-time-countdown {
+    display: flex;
+}
+
+.ecomus-time-countdown__wrapper {
+    display: inline-flex;
+}
+
+.ecomus-time-countdown--1 {
+    .ecomus-time-countdown__wrapper {
+        gap: 8px;
+    }
+
+    .timer{
+        text-align: center;
+        color: var( --em-color__dark );
+        border: 1px solid var( --em-color__dark );
+        position: relative;
+        padding: 13px 0 9px;
+        min-width: 88px;
+
+        .text{
+            display: block;
+            @include font-size(16/16);
+            font-weight: 500;
+        }
+
+        .divider{
+            position: absolute;
+            top: 15px;
+            right: -8px;
+            @include font-size(44/16);
+            line-height: 1;
+            font-weight: 600;
+
+             /*rtl:raw:
+                right: -8px;
+                left: auto;
+            */
+        }
+    }
+
+    .digits{
+        @include font-size(32/16);
+        line-height: 1;
+        font-weight: 500;
+        display: block;
+        min-width: 15px;
+        margin-bottom: 4px;
+    }
+
+    .days,
+    .weeks {
+        .digits{
+            min-width: auto;
+        }
+    }
+
+	.divider{
+		display: none;
+	}
+}
+
+.ecomus-time-countdown--2 {
+    .ecomus-time-countdown__wrapper {
+        gap: 10px;
+        border-radius: 100px;
+        padding: 10px 16px;
+        background-color: #ff0b0b1a;
+        align-items: center;
+    }
+
+    .ecomus-svg-icon {
+        @include font-size(20/16);
+        font-weight: 600;
+        color: #ff0b0b;
+        margin-right: 3px;
+    }
+
+    .timer {
+        @include font-size(18/16);
+        font-weight: 600;
+        color: #ff0b0b;
+
+        .divider {
+            margin-left: 10px;
+        }
+    }
+}

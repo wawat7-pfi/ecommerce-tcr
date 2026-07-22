@@ -1,0 +1,78 @@
+.ecomus-accordion__title {
+	@include font-size(16/16);
+	font-weight: 500;
+	color: var( --em-color__dark );
+	margin: 0;
+	border-bottom: 1px solid var( --em-border-color );
+	position: relative;
+
+	a {
+		color: inherit;
+		display: block;
+		padding: 12px 50px 12px 0;
+	}
+}
+
+.ecomus-accordion__content {
+	padding-top: 24px;
+	padding-bottom: 20px;
+	display: none;
+}
+
+.ecomus-accordion__icon {
+	@include font-size(12/16);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	border-radius: 50%;
+	display: inline-flex;
+	transition: .3s;
+
+	i, svg {
+		transition: .3s;
+	}
+}
+
+.ecomus-accordion__title-default {
+	.ecomus-accordion__icon {
+		transition: .4s ease .1s;
+	}
+}
+
+.ecomus-accordion__title-icon {
+	.ecomus-accordion__icon-active {
+		opacity: 0;
+	}
+}
+
+.ecomus-tab--active {
+	&.ecomus-accordion__title-icon {
+		.ecomus-accordion__icon-default {
+			opacity: 0;
+		}
+
+		.ecomus-accordion__icon-active {
+			opacity: 1;
+		}
+	}
+
+	&.ecomus-accordion__title-default {
+		.ecomus-accordion__icon {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.ecomus-accordion__icon-position--left {
+	.ecomus-accordion__icon {
+		left: 0;
+		right: auto;
+	}
+
+	.ecomus-accordion__title-text {
+		padding-left: 50px;
+		padding-right: 0;
+	}
+}

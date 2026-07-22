@@ -1,0 +1,49 @@
+.ecomus-testimonial-carousel-4__item {
+    text-align: center;
+}
+
+.ecomus-testimonial-carousel-4__text {
+    @include font-size(16/16);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--em-color__dark);
+}
+
+.ecomus-testimonial-carousel-4__content {
+    @include font-size(28/16);
+    color: var(--em-color__dark);
+}
+
+.ecomus-testimonial-carousel-4__text,
+.ecomus-testimonial-carousel-4__content {
+    padding: 0 3rem;
+}
+
+.ecomus-testimonial-carousel-4__positioning {
+    gap: 84px;
+    margin-top: 78px;
+    justify-content: safe center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+}
+
+.ecomus-testimonial-carousel-4__positioning-item {
+    --em-image-rounded: 0;
+
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: .4s;
+
+    &:not(.active) {
+        opacity: 0.3;
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+}

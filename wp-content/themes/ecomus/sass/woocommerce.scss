@@ -1,0 +1,104 @@
+/*
+Theme Name: _e
+
+WooCommerce styles override
+*/
+
+// Import variables and mixins
+@import "abstracts/abstracts";
+
+/**
+ * Components
+ */
+@import "woocommerce/components";
+
+/**
+ * Top categories
+ */
+ @import "woocommerce/top-categories";
+
+/**
+ * Catalog Toolbar
+ */
+ @import "woocommerce/toolbar";
+
+/**
+ * Products Card
+ */
+@import "woocommerce/product-card";
+
+/**
+ * My Account
+ */
+ @import "woocommerce/my-account";
+
+ /**
+ * Badges
+ */
+@import "woocommerce/badges";
+
+/**
+ * Pagination
+ */
+@import "woocommerce/pagination";
+
+/**
+ * WooCommerce widgets
+ */
+@import "woocommerce/widgets";
+
+/**
+ * Single Product
+ */
+@import "woocommerce/single-product";
+
+/**
+ * Product Tabs
+ */
+@import "woocommerce/tabs";
+
+/**
+ * Product Review
+ */
+@import "woocommerce/review";
+
+/**
+ * Cart
+ */
+ @import "woocommerce/cart";
+ @import "woocommerce/cart-blocks";
+
+/**
+ * Checkout
+ */
+ @import "woocommerce/checkout";
+
+/**
+ * Compare
+ */
+ @import "woocommerce/compare";
+
+/**
+ * Wishlist
+ */
+ @import "woocommerce/wishlist";
+
+/**
+ * Tracking Order
+ */
+ @import "woocommerce/track-order";
+
+
+/**
+ * Back in stock notifier
+ */
+ @import "woocommerce/back-in-stock-notifier";
+
+/**
+ * Responsive
+ */
+@import "woocommerce/responsive/responsive";
+
+/* Elementor widgets builder
+--------------------------------------------- */
+@import "elementor-widgets-builder";

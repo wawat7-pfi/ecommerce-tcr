@@ -1,0 +1,119 @@
+.catalog-top-categories {
+	--em-ratio-percent: 128%;
+	position: relative;
+	width: 100%;
+	margin-bottom: 42px;
+	margin-top: 20px;
+
+	.ecomus-swiper-button {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0;
+		z-index: 1;
+		opacity: 0;
+
+		/*rtl:raw:
+			transform: translateY(-50%) rotateY(180deg);
+		*/
+	}
+
+	.swiper-button-prev {
+		left: 15px;
+		margin-left: 20px;
+	}
+
+	.swiper-button-next {
+		right: 15px;
+		margin-right: 20px;
+	}
+
+	&:hover {
+		.ecomus-swiper-button {
+			opacity: 1;
+
+			&.swiper-button-disabled {
+				background-color: rgba( 0, 0, 0, .2 );
+    			cursor: not-allowed;
+			}
+		}
+
+		.swiper-button-prev {
+			margin-left: 0;
+		}
+
+		.swiper-button-next {
+			margin-right: 0;
+		}
+	}
+}
+
+.catalog-top-categories__wrapper {
+	&:not( .swiper-wrapper ) {
+		display: flex;
+		flex-wrap: nowrap;
+		overflow: hidden;
+	}
+}
+
+.catalog-top-categories__title.em-button-light {
+	--em-button-padding-left: 30px;
+	--em-button-padding-right: 30px;
+	--em-button-font-size: 15px;
+	--em-button-icon-size: 10px;
+	--em-button-bg-color-hover: #000000;
+	--em-button-color-hover: #ffffff;
+
+	gap: 0;
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+	max-width: calc( 100% - 50px );
+
+	.ecomus-svg-icon {
+		transition: transform .3s, width .3s, margin-left .3s ease .1s;
+		transform: scale(0);
+		transform-origin: right;
+		width: 0;
+		margin: 0;
+
+		/*rtl:raw:
+			transform: scale(0) rotateY(180deg);
+		*/
+	}
+
+	&:hover {
+		.ecomus-svg-icon {
+			transform: scale(1);
+			width: 10px;
+			margin-left: 9px;
+
+			/*rtl:raw:
+				transform: scale(1) rotateY(180deg);
+			*/
+		}
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.catalog-top-categories__text {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.catalog-top-categories__button {
+	display: block;
+	text-align: center;
+	margin-top: 10px;
+
+	.catalog-top-categories__text {
+		@include font-size(15/16);
+		font-weight: 500;
+	}
+}

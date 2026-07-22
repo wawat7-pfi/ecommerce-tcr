@@ -1,0 +1,45 @@
+.header-logo {
+	flex: 0 1 auto;
+	position: relative;
+	z-index: 100;
+
+	> a {
+		position: relative;
+		display: block;
+		line-height: 1;
+		font-weight: 600;
+		color: inherit;
+
+		&:hover {
+			text-decoration: none;
+		}
+
+		img {
+			--em-image-rounded: 0;
+			display: inline-block;
+			vertical-align: middle;
+		}
+
+		svg {
+			fill: currentColor;
+			vertical-align: middle;
+			width: auto;
+			height: auto;
+		}
+	}
+
+	.site-title,
+	.site-description {
+		@extend .screen-reader-text;
+	}
+
+	.logo-light {
+		display: none;
+	}
+}
+
+.header-logo__text,
+.header-logo__svg {
+	@include font-size(28/16);
+	color: var( --em-color__dark );
+}

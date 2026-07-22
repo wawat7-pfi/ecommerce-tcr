@@ -1,0 +1,101 @@
+# =========================
+# WordPress Core Files
+# =========================
+# Ignore semua core WordPress (bisa di-install ulang)
+/wp-admin/
+/wp-includes/
+/wp-activate.php
+/wp-blog-header.php
+/wp-comments-post.php
+/wp-config-docker.php
+/wp-config-sample.php
+/wp-cron.php
+/wp-links-opml.php
+/wp-load.php
+/wp-login.php
+/wp-mail.php
+/wp-settings.php
+/wp-signup.php
+/wp-trackback.php
+/xmlrpc.php
+/index.php
+/license.txt
+/readme.html
+
+# =========================
+# WordPress Config
+# =========================
+# wp-config.php berisi credentials, JANGAN commit
+/wp-config.php
+
+# =========================
+# wp-content
+# =========================
+# Ignore uploads (media files, terlalu besar untuk git)
+/wp-content/uploads/
+
+# Ignore cache
+/wp-content/cache/
+
+# Ignore upgrade files
+/wp-content/upgrade/
+
+# Ignore jetpack WAF (auto-generated)
+/wp-content/jetpack-waf/
+
+# Ignore mu-plugins (biasanya auto-generated)
+/wp-content/mu-plugins/
+
+# =========================
+# Plugins - ignore semua, track hanya yang custom
+# =========================
+/wp-content/plugins/*
+!/wp-content/plugins/index.php
+# Uncomment di bawah untuk track plugin custom:
+# !/wp-content/plugins/your-custom-plugin/
+
+# =========================
+# Themes - ignore semua kecuali yang dipakai
+# =========================
+/wp-content/themes/*
+!/wp-content/themes/index.php
+!/wp-content/themes/ecomus/
+!/wp-content/themes/ecomus-child/
+!/wp-content/themes/canopy-child/
+
+# =========================
+# Docker
+# =========================
+# Ignore .env (berisi passwords)
+/docker/.env
+
+# =========================
+# Database
+# =========================
+*.sql
+*.sql.gz
+
+# =========================
+# Notes / Personal files
+# =========================
+/.note/
+
+# =========================
+# OS & IDE files
+# =========================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+*.code-workspace
+.agents/
+
+# =========================
+# Node / Build tools (jika ada)
+# =========================
+node_modules/
+.npm/
+*.log

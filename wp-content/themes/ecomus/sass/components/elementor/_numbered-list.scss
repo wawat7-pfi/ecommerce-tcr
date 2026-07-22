@@ -1,0 +1,24 @@
+.ecomus-numbered-list__item {
+	gap: 17px;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid $color__border-main;
+
+	&:last-child {
+		padding-bottom: 0;
+		margin-bottom: 0;
+		border-bottom: none;
+	}
+}
+
+.ecomus-numbered-list__number {
+	width: 53px;
+	flex: 0 0 53px;
+	height: 53px;
+	border-radius: 100%;
+	border: 1px solid $color__border-main;
+}
+
+.ecomus-numbered-list__text {
+	@include font-size(16/16);
+}

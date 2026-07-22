@@ -1,0 +1,55 @@
+.ecomus-social-icons__wrapper {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 12px;
+}
+
+.ecomus-social-icons__item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.ecomus-img-icon {
+        display: inline-flex;
+
+        img {
+            display: block;
+        }
+    }
+}
+
+.ecomus-social-icons__style--outline {
+	.ecomus-social-icons__item {
+		border-radius: 50%;
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
+		border: 1px solid var(--em-color__dark);
+
+		&:hover {
+			border-color: #DB1215;
+		}
+	}
+}
+
+.ecomus-social-icons__style--solid {
+	.ecomus-social-icons__item {
+		border-radius: 50%;
+		width: 34px;
+		height: 34px;
+		color: var(--em-color__dark);
+		background-color: var(--em-border-color);
+
+		&:hover {
+			color: var(--em-color__light);
+			background-color: var(--em-social-color, #000);
+
+			&.em-socials--instagram,
+			&.em-socials--threads,
+			&.em-socials--tiktok {
+				background-image: var(--em-social-color);
+			}
+		}
+	}
+}

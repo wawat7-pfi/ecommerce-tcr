@@ -1,0 +1,82 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.button {
+	@include button();
+	@include button-hover-eff();
+}
+
+.em-button {
+	@include button();
+}
+
+.em-button-hover-eff {
+	@include button-hover-eff();
+}
+
+.em-button-light {
+	@include button-light();
+}
+
+.em-button-primary {
+	@include button-primary();
+}
+
+.em-button-outline {
+	@include button-outline();
+}
+
+.em-button-outline-dark {
+	@include button-outline-dark();
+}
+
+.em-button-subtle {
+	@include button-subtle();
+}
+
+.em-button-text {
+	@include button-text();
+}
+
+.em-button-icon {
+	@include button-icon();
+}
+
+.em-button-round {
+	--em-button-rounded: 10px;
+}
+
+.em-button-circle {
+	--em-button-rounded: 30px;
+}
+
+.em-button-icon-hover {
+	--em-button-icon-size: 9px;
+	gap: 0;
+
+	.ecomus-button-text + .ecomus-svg-icon,
+    .ecomus-svg-icon {
+		transition: transform .3s, width .3s;
+		transform: scale(0);
+		width: 0;
+		margin: 0;
+
+		/*rtl:raw:
+			transform: scale(0) rotateY(180deg);
+		*/
+	}
+
+	&:hover {
+		gap: var(--em-button-icon-spacing);
+
+		.ecomus-svg-icon {
+			transform: scale(1);
+			width: var(--em-button-icon-size);
+
+			/*rtl:raw:
+				transform: scale(1) rotateY(180deg);
+			*/
+		}
+	}
+}

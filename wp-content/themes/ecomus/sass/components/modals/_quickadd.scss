@@ -1,0 +1,147 @@
+.quick-add-modal {
+	&.single-product {
+		div.product {
+			.ecomus-product-price .woocs_price_code,
+			.price {
+				margin: 0;
+
+				@include font-size(20/16);
+
+				del {
+					@include font-size(14/16);
+				}
+			}
+
+			.ecomus-product-price {
+				.price {
+					ins,
+					del {
+						order: inherit;
+					}
+				}
+			}
+
+			.ecomus-product-atc-group {
+				row-gap: 15px;
+			}
+
+			.em-buy-now-button {
+				margin-top: 7px;
+			}
+
+			form.cart .product-featured-icons {
+				transform: translateY(1px);
+			}
+		}
+
+		.sold-by-meta {
+			margin: 7px 0 0 0;
+		}
+	}
+
+	.modal__button-close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+	}
+}
+
+.modal__quickadd {
+	--em-modal-content-width: 510px;
+	--em-button-height: 46px;
+
+	> .modal__container {
+		> .modal__wrapper {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+	.entry-summary {
+		padding: 41px 20px 35px;
+		height: 100%;
+		max-height: calc( 100vh - 200px );
+		overflow-y: auto;
+		overflow-x: hidden;
+		scroll-behavior: smooth;
+		scrollbar-width: thin;
+		scrollbar-color: rgba( $color__dark, 0.12 ) rgba( $color__dark, 0.05 );
+	}
+
+	.entry-summary__header {
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		margin-bottom: 20px;
+	}
+
+	.product-thumbnail {
+		max-width: 70px;
+
+		img {
+			width: 100%;
+			border-radius: var(--em-image-rounded-product-card-small);
+		}
+	}
+
+	.product-summary {
+		flex: auto;
+	}
+
+	.product_title {
+		margin-top: 0;
+		margin-bottom: 10px;
+		@include font-size(20/16);
+		line-height: 19.2px;
+	}
+
+	.ecomus-product-atc-group {
+		flex-wrap: wrap;
+	}
+
+	div.product {
+		.product-summary {
+			.ecomus-product-price {
+				justify-content: flex-start;
+				margin-bottom: 0;
+			}
+
+			.sold-by-meta {
+				margin-top: 11px;
+			}
+		}
+
+		.product-featured-icons > * {
+			&:last-child {
+				&:not(.loading) {
+					&::after {
+						right: 30%;
+						transform: translateX(30%);
+					}
+				}
+			}
+		}
+	}
+
+	.wcboost-variation-swatches--has-tooltip {
+		.wcboost-variation-swatches__item {
+			&:before,
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+@media ( max-width: 767px ) {
+	.modal__quickadd {
+		.entry-summary {
+			padding: 25px var(--em-modal-content-padding-x) 15px;
+			max-height: 100%;
+		}
+
+		.product_title {
+			@include font-size(1);
+		}
+	}
+}

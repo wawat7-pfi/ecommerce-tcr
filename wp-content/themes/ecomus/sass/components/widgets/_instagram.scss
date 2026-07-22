@@ -1,0 +1,28 @@
+.ecomus-instagram-widget {
+	.ecomus-instagram__list {
+		margin: 0 -3px;
+		padding: 0;
+		list-style: none;
+		display: flex;
+		flex-wrap: wrap;
+		position: relative;
+		overflow: hidden;
+	}
+
+	.ecomus-instagram__item {
+		transition: 0.5s;
+		width: 12.5%;
+		margin: 0;
+		padding: 0 3px 6px 3px;
+
+		&:hover {
+			opacity: 0.9;
+		}
+	}
+
+	@for $i from 2 through 4 {
+		.columns-#{$i} .ecomus-instagram__item {
+			width: 100% / $i;
+		}
+	}
+}

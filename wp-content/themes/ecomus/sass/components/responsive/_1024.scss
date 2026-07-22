@@ -1,0 +1,38 @@
+@media (max-width: 1024px) {
+    .topbar-mobile--keep-all {
+        .topbar-container {
+            overflow: hidden;
+            overflow-x: auto;
+        }
+    }
+
+    #gotop {
+        right: 15px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .search-type-sidebar {
+        --em-modal-content-width: 400px;
+    }
+
+    .single-post {
+        h1.entry-title {
+            @include font-size(32/16);
+        }
+    }
+
+    .ecomus-posts-related {
+        .swiper-pagination {
+            display: block;
+        }
+    }
+
+    .topbar-slides {
+		max-width: 500px;
+	}
+
+    .ecomus-icon-box-widget__item.vertical {
+		width: 100%;
+	}
+}

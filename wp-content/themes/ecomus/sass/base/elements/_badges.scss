@@ -1,0 +1,98 @@
+.em-badge {
+	--em-badge-font-size: 10px;
+	--em-badge-color: #ffffff;
+	--em-badge-bg-color: #000000;
+	--em-badge-border-color: var(--em-badge-bg-color);
+	--em-badge-color-hover: #ffffff;
+	--em-badge-bg-color-hover: #000000;
+	--em-badge-border-color-hover: var(--em-badge-bg-color-hover);
+	--em-badge-eff-bg-color-hover: rgba(255, 255, 255, 0.25);
+	--em-badge-padding-top: 9px;
+	--em-badge-padding-right: 16px;
+	--em-badge-padding-bottom: 8px;
+	--em-badge-padding-left: 16px;
+	--em-badge-line-height: 1;
+	--em-badge-rounded: min( 3px, var(--em-button-rounded) );
+	--em-badge-font-weight: 700;
+	font-size: var(--em-badge-font-size);
+	background-color: var(--em-badge-bg-color);
+	color: var(--em-badge-color);
+	border: 1px solid var(--em-badge-border-color);
+	padding: var(--em-badge-padding-top) var(--em-badge-padding-right) var(--em-badge-padding-bottom) var(--em-badge-padding-left);
+	line-height: var(--em-badge-line-height);
+	border-radius: var(--em-badge-rounded);
+	font-weight: var(--em-badge-font-weight);
+	display: inline-flex;
+	text-transform: uppercase;
+	transition: 0.4s;
+	cursor: pointer;
+	position: relative;
+	overflow: hidden;
+	transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out, border 0.25s ease-in-out;
+    will-change: background-color, color, border;
+
+	&:hover {
+		color: var(--em-badge-color-hover);
+		background-color: var(--em-badge-bg-color-hover);
+		border-color: var(--em-badge-border-color-hover);
+	}
+
+	&:hover:after {
+		animation: shine 0.75s cubic-bezier(0.01, 0.56, 1, 1);
+	}
+
+	&:after {
+		background-image: linear-gradient(90deg, transparent, var(--em-badge-eff-bg-color-hover, transparent), transparent);
+		content: "";
+		left: 150%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		transform: skew(-20deg);
+		width: 200%;
+	}
+}
+
+.em-badge-light {
+	--em-badge-bg-color: #ffffff;
+	--em-badge-bg-color-hover: #ffffff;
+	--em-badge-color: #000000;
+	--em-badge-color-hover: #000000;
+	--em-badge-eff-bg-color-hover: rgba(000, 000, 000, 0.25);
+	border: none;
+}
+
+.em-badge-gray {
+	--em-badge-bg-color: #F2F2F2;
+	--em-badge-bg-color-hover: #F2F2F2;
+	--em-badge-color: #000000;
+	--em-badge-color-hover: #000000;
+	--em-badge-eff-bg-color-hover: rgba(000, 000, 000, 0.25);
+	border: none;
+}
+
+.em-badge-outline {
+	--em-badge-color: #000000;
+	--em-badge-color-hover: var(--em-color__primary);
+	--em-badge-bg-color: transparent;
+	--em-badge-bg-color-hover: transparent;
+	--em-badge-border-color: #EBEBEB;
+	--em-badge-border-color-hover: var(--em-color__primary);
+
+	&:after {
+		display: none;
+	}
+}
+
+.em-badge-outline-dark {
+	--em-badge-color: #000000;
+	--em-badge-color-hover: var(--em-color__primary);
+	--em-badge-bg-color: transparent;
+	--em-badge-bg-color-hover: transparent;
+	--em-badge-border-color: #000000;
+	--em-badge-border-color-hover: var(--em-color__primary);
+
+	&:after {
+		display: none;
+	}
+}

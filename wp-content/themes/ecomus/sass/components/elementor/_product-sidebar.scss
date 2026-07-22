@@ -1,0 +1,30 @@
+.elementor-widget-ecomus-product-sidebar {
+    .ecomus-heading {
+        &.active {
+			.em-collapse-icon {
+				&:after {
+					transform: translateY(-50%) rotate(180deg);
+				}
+			}
+		}
+    }
+    
+    .em-collapse-icon {
+		cursor: pointer;
+
+		&:after {
+			content: "";
+			background-image: url("data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iaGR0LWZhY2V0LXRpdGxlX2ljb24iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjExIiBoZWlnaHQ9IjciIHZpZXdCb3g9IjAgMCAxMSA3IiBmaWxsPSJub25lIj48cGF0aCBkPSJNMTEgNS41TDUuNSA2LjU1ODY4ZS0wOEwtNi41NTg2OGUtMDggNS41TDAuOTc2MjUgNi40NzYyNUw1LjUgMS45NTI1TDEwLjAyMzggNi40NzYyNUwxMSA1LjVaIiBmaWxsPSJjdXJyZW50Q29sb3IiPjwvcGF0aD48L3N2Zz4=");
+			background-repeat: no-repeat;
+			width: 11px;
+			height: 7px;
+			display: block;
+			transition: transform .35s linear;
+			will-change: transform;
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			right: 0;
+		}
+	}
+}

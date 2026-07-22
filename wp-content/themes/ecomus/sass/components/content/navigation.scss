@@ -1,0 +1,51 @@
+.navigation {
+    width: 100%;
+
+    .nav-links {
+        > span,
+        a {
+            @include button();
+            padding: 0;
+            width: 45px;
+            height: 45px;
+            margin: 0 3.5px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &.current {
+                color: var(--em-color__light);
+                background-color: #0A0A0A;
+                border-color: #0A0A0A;
+            }
+
+            .ecomus-svg-icon {
+                @include font-size(10/16);
+                padding-bottom: 0;
+            }
+        }
+    }
+}
+
+.blog-grid {
+    .navigation {
+        text-align: center;
+    }
+}
+
+.ecomus-blog-page {
+    .navigation {
+        margin-top: 50px;
+    }
+
+    &.blog-classic {
+        .navigation {
+            margin-top: 2px;
+        }
+    }
+}

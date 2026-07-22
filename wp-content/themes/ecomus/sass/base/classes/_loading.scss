@@ -1,0 +1,40 @@
+.em-loading-spin {
+	@include em-loading();
+}
+
+.em-vibrate {
+	-webkit-animation-name: vibrate;
+	animation-name: vibrate;
+}
+
+.em-progress-bar {
+	pointer-events: none;
+    background-color: var(--em-color__primary);
+    box-shadow: 0 0 6px var(--em-color__primary), 0 0 var(--em-color__primary);
+    width: 100%;
+    height: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999999;
+    transform: scaleX(0);
+    transform-origin: left;
+	transition: transform .4s;
+}
+
+.em-fadeinup {
+    --em-fadeinup-delay: 0.05s;
+
+    transition: opacity 0.25s, transform 0.25s;
+    transition-delay: var(--em-fadeinup-delay);
+    
+    &:not(.em-animated) {
+        opacity: 1;
+		transform: translateY(0);
+    }
+
+    &.em-animated {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+}

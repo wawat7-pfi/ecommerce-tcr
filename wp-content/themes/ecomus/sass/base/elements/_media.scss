@@ -1,0 +1,63 @@
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+img {
+	height: auto; // Make sure images are scaled correctly.
+	max-width: 100%; // Adhere to container width.
+	vertical-align: middle;
+}
+
+figure {
+	margin: 1em 0 2em; // Extra wide images within figure tags don't overflow the content area.
+}
+
+.em-ratio {
+	display: flex;
+	width: 100%;
+	position: relative;
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 0;
+		display: block;
+		padding-bottom: var(--em-ratio-percent);
+	}
+
+	img {
+		display: block;
+		max-width: 100%;
+		position: absolute;
+		margin: 0;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.em-ratio--portrait {
+	--em-ratio-percent: 128%;
+}
+
+.em-eff-img-zoom {
+	overflow: hidden;
+	img {
+		transition: all 1s;
+	}
+	&:hover img {
+		transform: scale(var(--em-image-eff-scale));
+	}
+}
+
+.em-image-rounded,
+.elementor .elementor-element img,
+img  {
+	border-radius: var(--em-image-rounded);
+}

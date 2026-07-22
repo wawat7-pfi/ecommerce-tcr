@@ -1,0 +1,104 @@
+.ecomus-product-tabs-carousel__items {
+    &.loading {
+        .ecomus-product-tabs-carousel__loading {
+            display: block;
+        }
+    }
+
+    &:not(.loading) {
+        .ecomus-product-tabs-carousel__item {
+            transition: .3s;
+
+            &.active {
+                opacity: 1;
+                animation: fadeIn .2s ease-in;
+            }
+        }
+    }
+
+    .ecomus-product-tabs-carousel__item {
+        &.swiper {
+            ul.products {
+                margin: 0;
+
+                li.product {
+                    padding: 0;
+                }
+            }
+        }
+
+        &:not(.swiper-initialized) {
+            overflow: hidden;
+
+            ul.products {
+                flex-wrap: nowrap;
+            }
+
+            li.product {
+                flex-shrink: 0;
+            }
+        }
+    }
+}
+
+.ecomus-product-tabs-carousel__heading {
+    gap: 70px;
+    margin-bottom: 55px;
+
+    span {
+        @include font-size(32/16);
+        font-weight: 500;
+        line-height: 38.4px;
+        padding: 0 0 10px;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        transition: .4s;
+
+        &:hover {
+            color: var(--em-color__dark);
+        }
+
+        &.active {
+            font-weight: 600;
+            color: var(--em-color__dark);
+            border-color: var(--em-color__dark);
+        }
+    }
+}
+
+.ecomus-product-tabs-carousel__item {
+    &.waiting {
+        opacity: 0;
+        animation: fadeOut .3s ease-out;
+    }
+
+    &.no-active {
+        opacity: 0;
+        display: none;
+    }
+}
+
+.ecomus-product-tabs-carousel__loading {
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    background-color: rgba( 255, 255, 255, 0.9 );
+
+    &::before {
+        top: 5%;
+        bottom: auto;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ecomus-product-tabs-carousel {
+        .ecomus-product-tabs-carousel__item,
+        .swiper {
+            padding: 5px;
+            margin: -5px;
+        }
+    }
+}

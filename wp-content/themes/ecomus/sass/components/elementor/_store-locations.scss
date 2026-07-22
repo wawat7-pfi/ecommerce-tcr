@@ -1,0 +1,95 @@
+.ecomus-store-locations {
+    --em-rounded-iframe: 0px;
+
+    gap: 30px;
+}
+
+.ecomus-store-locations__tabs {
+    width: 33.33337%;
+}
+
+.ecomus-store-locations__scroll {
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-height: 100%;
+    gap: 15px;
+    @include scrollbar();
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.ecomus-store-locations__content {
+    padding: 28px 27px 30px;
+    border: 1px solid var(--em-border-color);
+    border-radius: var( --em-rounded-md );
+    cursor: pointer;
+
+    &.active {
+        background-color: var(--em-color__dark);
+        color: var(--em-color__light);
+        border-color: var(--em-color__dark);
+
+        .ecomus-store-locations__title {
+            color: inherit;
+
+            .ecomus-svg-icon {
+                margin-right: 12px;
+                @include font-size(1);
+                transform: scale(1);
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+
+        .ecomus-store-locations__info {
+            span,
+            a {
+                color: inherit;
+            }
+        }
+    }
+}
+
+.ecomus-store-locations__title {
+    @include font-size(20/16);
+    line-height: 1.2;
+    color: var(--em-color__dark);
+    margin-bottom: 17px;
+
+    .ecomus-svg-icon {
+        margin-right: 0;
+        @include font-size(0);
+        opacity: 0;
+        visibility: hidden;
+        transform: scale(0);
+        transition: 0.4s ease 0s;
+    }
+}
+
+.ecomus-store-locations__info {
+    span {
+        color: var(--em-color__dark);
+    }
+}
+
+.ecomus-store-locations__tab {
+    width: 66.66663%;
+    flex: auto;
+}
+
+.ecomus-store-locations__embed {
+    animation: fadeOut .8s ease-in-out;
+
+    &.active {
+        animation: fadeIn .8s ease-in-out;
+    }
+
+    &:not(.active) {
+        display: none;
+    }
+
+    iframe {
+        border-radius: var(--em-rounded-iframe);
+    }
+}

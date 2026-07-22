@@ -1,0 +1,126 @@
+.ecomus-timeline {
+    padding-top: 130px;
+    padding-bottom: 20px;
+}
+
+.ecomus-timeline__line {
+    width: 1px;
+    border-left: 1px dashed var(--em-border-color);
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 10px;
+        height: 10px;
+        z-index: 3;
+        background-color: var(--em-border-color);
+        border-radius: 100%;
+    }
+
+    &::before {
+        top: 0;
+    }
+
+    &::after {
+        bottom: 0;
+    }
+}
+
+.ecomus-timeline__item {
+    &:nth-child(2n+1) {
+        .ecomus-timeline__inner {
+            flex-direction: row-reverse;
+        }
+
+        .ecomus-timeline__content {
+            text-align: right;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%);
+        width: 10px;
+        height: 10px;
+        z-index: 3;
+        background-color: #DB1215;
+        border-radius: 100%;
+    }
+}
+
+.ecomus-timeline__inner {
+    justify-content: space-between;
+    gap: 190px;
+    padding: 90px 0;
+
+    &::before,
+    &::after {
+        position: absolute;
+        content: "";
+        width: 40px;
+        background-color: var(--em-border-color);
+        height: 1px;
+        z-index: 3;
+        top: calc(50% + 5px);
+    }
+
+    &::before {
+        left: calc(50% + 35px);
+        transform: translate(-50%);
+    }
+
+    &::after {
+        right: calc(50% + 35px);
+        transform: translate(50%);
+    }
+}
+
+.ecomus-timeline__year {
+    @include font-size(20/16);
+    line-height: 1;
+    background-color: var(--em-color__dark);
+    color: var(--em-color__light);
+    border-radius: var(--em-rounded-xs);
+    padding: 8px 35px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+.ecomus-timeline__image,
+.ecomus-timeline__content {
+    max-width: 490px;
+    width: 50%;
+    z-index: 3;
+}
+
+.ecomus-timeline__content {
+    background-color: $color__background-body;
+}
+
+.ecomus-timeline__subtitle {
+    color: var(--em-color__dark);
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 7px;
+}
+
+.ecomus-timeline__title {
+    @include font-size(28/16);
+    line-height: normal;
+    color: var(--em-color__dark);
+    margin-bottom: 10px;
+}

@@ -1,0 +1,26 @@
+<wpml-config>
+	<custom-fields>
+		<custom-field action="copy">_is_new</custom-field>
+		<custom-field action="copy">_is_pre_order</custom-field>
+		<custom-field action="copy">custom_badges_text</custom-field>
+		<custom-field action="copy">custom_badges_bg</custom-field>
+		<custom-field action="copy">custom_badges_color</custom-field>
+		<custom-field action="copy">ecomus_product_attribute</custom-field>
+		<custom-field action="copy">ecomus_product_attribute_number</custom-field>
+		<custom-field action="copy">ecomus_product_attribute_second</custom-field>
+		<custom-field action="copy">ecomus_product_attribute_number_second</custom-field>
+	</custom-fields>
+
+	<admin-texts>
+		<key name="theme_mods_ecomus">
+			<key name="logo_text" />
+			<key name="topbar_phone" />
+			<key name="topbar_email" />
+			<key name="header_mobile_menu_custom_text" />
+			<key name="post_sharing_whatsapp_number" />
+			<key name="mobile_navigation_bar_shop_menu_link" />
+			<key name="header_mobile_menu_link_text" />
+			<key name="header_mobile_menu_link" />
+		</key>
+	</admin-texts>
+</wpml-config>

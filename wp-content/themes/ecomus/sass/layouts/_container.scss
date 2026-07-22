@@ -1,0 +1,41 @@
+.em-container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	&:before {
+		@include clearfix();
+	}
+
+	&:after {
+		@include clearfix();
+		@include clearfix-after();
+	}
+
+	&.em-container-fluid {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 768px) {
+    .em-container {
+        max-width: 1500px;
+		padding-left: 30px;
+		padding-right: 30px;
+    }
+}
+
+@media (min-width: 1150px) {
+    .em-container {
+        max-width: 1540px;
+		padding-left: 50px;
+		padding-right: 50px;
+    }
+}
+
+.site-content {
+	padding-top: 3.375rem;
+	padding-bottom: 3.375rem;
+}

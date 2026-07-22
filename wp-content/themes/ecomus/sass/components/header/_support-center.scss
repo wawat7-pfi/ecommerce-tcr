@@ -1,0 +1,16 @@
+.header-support-center {
+	gap: 18px;
+}
+
+.header-support-center__icon {
+	@include font-size(28/16);
+}
+
+.header-support-center__phone {
+	line-height: 1;
+
+	a {
+		@include font-size(28/16);
+		color: var( --em-color__primary )
+	}
+}

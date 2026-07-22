@@ -1,0 +1,101 @@
+.ecomus-banner {
+    justify-content: center;
+    align-items: flex-end;
+    height: 660px;
+    border-radius: var(--em-image-rounded);
+    overflow: hidden;
+}
+
+.ecomus-banner__image {
+    align-self: stretch;
+}
+
+.ecomus-banner__title,
+.ecomus-banner__sub-title,
+.ecomus-banner__description,
+.ecomus-banner__button {
+    animation: slideIn .4s ease-in;
+}
+
+.ecomus-banner__title {
+    @include font-size(28/16);
+    color: var(--em-color__light);
+    margin-top: 0;
+    margin-bottom: 29px;
+
+    + .ecomus-banner__sub-title {
+        margin-top: -18px;
+    }
+}
+
+.ecomus-banner__sub-title {
+    @include font-size(20/16);
+    color: var(--em-color__light);
+    margin-bottom: 20px;
+
+    b,
+    strong {
+        font-weight: 600;
+    }
+}
+
+.ecomus-banner__description {
+    @include font-size(20/16);
+    color: var(--em-color__light);
+    margin-bottom: 28px;
+}
+
+.ecomus-banner__button {
+    --em-button-padding-top: 14px;
+    --em-button-padding-bottom: 14px;
+    --em-button-padding-left: 30px;
+    --em-button-padding-right: 30px;
+    position: relative;
+    z-index: 3;
+    margin: 0 0 46px 0;
+    &.em-button-subtle,
+    &.em-button-text {
+        --em-button-padding-left: 0;
+        --em-button-padding-right: 0;
+        --em-button-padding-top: 0;
+        --em-button-padding-bottom: 3px;
+    }
+}
+
+.ecomus-banner__align--stretch {
+    .ecomus-banner__summary {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+
+    .ecomus-banner__button {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+    &.ecomus-banner__text_align--center {
+        .ecomus-banner__button {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &.ecomus-banner__text_align--right {
+        .ecomus-banner__button {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+}
+
+.ecomus-banner__button--all {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}

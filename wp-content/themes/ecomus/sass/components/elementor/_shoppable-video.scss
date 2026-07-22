@@ -1,0 +1,117 @@
+.ecomus-shoppable-video__video-wrapper {
+	height: 100%;
+	display: flex;
+	position: relative;
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 0;
+		display: block;
+		padding-bottom: var(--em-ratio-percent);
+	}
+
+	video {
+		display: block;
+		max-width: 100%;
+		position: absolute;
+		margin: 0;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.ecomus-shoppable-video__product {
+    gap: 15px;
+	background-color: var(--em-color__light);
+	padding: 15px;
+    margin-top: 10px;
+}
+
+.ecomus-shoppable-video__product-image {
+    max-width: 70px;
+
+	img {
+		border: 1px solid var(--em-border-color);
+	}
+
+	a {
+		display: block;
+		width: 100%;
+	}
+}
+
+.elementor .elementor-element {
+    .ecomus-shoppable-video__product-image {
+        img {
+            border-radius: var(--em-rounded-full);
+        }
+    }
+}
+
+.ecomus-shoppable-video__product-summary {
+    flex-basis: 100%;
+}
+
+.ecomus-shoppable-video__product-title {
+    @include font-size(16/16);
+	font-weight: 400;
+    color: var(--em-color__dark);
+    margin: 0;
+}
+
+.ecomus-shoppable-video__product-price {
+    @include font-size(14/16);
+    font-weight: 600;
+    line-height: 16.8px;
+    color: $color__dark;
+    margin-top: 4px;
+    flex-wrap: wrap;
+    gap: 0;
+
+    .woocs_price_code {
+        display: flex;
+        gap: 5px;
+    }
+
+    ins {
+        color: #DB1215;
+        background-color: transparent;
+        margin-left: 5px;
+    }
+
+    del {
+        color: rgba( $color__dark, 0.5 );
+        font-weight: 400;
+    }
+
+    > .woocommerce-Price-amount {
+        margin-left: 5px;
+        margin-right: 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .woocommerce-price-suffix {
+        order: 3;
+        margin-left: 5px;
+    }
+}
+
+.ecomus-shoppable-video__product-button {
+	--em-button-font-size: 17px;
+	--em-button-width: 40px;
+	--em-button-height: 40px;
+
+    flex: 1 0 auto;
+}

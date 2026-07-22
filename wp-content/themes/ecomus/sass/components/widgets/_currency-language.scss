@@ -1,0 +1,132 @@
+.ecomus-currency-language {
+	--em-image-rounded: 0;
+	position: relative;
+
+	.current {
+		display: inline-block;
+		cursor: pointer;
+		padding: 15px 0;
+		position: relative;
+		white-space: nowrap;
+		z-index: 10;
+
+		.ecomus-svg-icon {
+			@include font-size(10/16);
+			position: relative;
+			top: -1px;
+			margin-left: 5px;
+			z-index: -1;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -8px;
+			background-color: var( --em-color__light );
+			width: 16px;
+			height: 16px;
+			transform: translateX(-50%) rotate(45deg);
+			opacity: 0;
+			visibility: hidden;
+			z-index: 1;
+		}
+
+		&.active {
+			&:before {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+
+		img {
+			--em-image-rounded: 0px;
+			max-width: 16px;
+			margin-right: 5px;
+			margin-bottom: 2px;
+		}
+	}
+
+	.ecomus-language__menu-item {
+		&.active {
+			a {
+				color: var( --em-color__primary );
+			}
+		}
+	}
+
+	.currency-dropdown {
+		padding: 0;
+        position: absolute;
+		top: 100%;
+		left: 50%;
+        right: auto;
+		transform: translateX(-50%);
+        min-width: 250px;
+        overflow-y: visible;
+		box-shadow: 0 0 18px rgba(0, 0, 0, 0.2);
+		opacity: 0;
+		visibility: hidden;
+		z-index: 9;
+
+		&.active {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	.preferences-menu__item-child {
+		margin: 0;
+		padding: 15px 20px;
+		list-style-type: none;
+		background-color: var( --em-color__light );
+		text-align: left;
+		line-height: 1.8;
+	}
+
+	.woocs_flag_view_item {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		padding: 2px 0;
+
+		img {
+			max-width: 16px;
+			margin-right: 5px;
+		}
+	}
+
+	.woocs_flag_view_item_current {
+		opacity: 1;
+		color: var( --em-color__primary );
+	}
+
+	.woocs_flag {
+		max-width: 16px;
+	}
+
+	&.ecomus-currency {
+		.current {
+			padding-left: 25px;
+
+			img {
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 0;
+				pointer-events: none;
+			}
+		}
+	}
+}
+
+.ecomus-language,
+.ecomus-widget__languages {
+	.currency-dropdown {
+        width: max-content;
+		min-width: 100px;
+	}
+}

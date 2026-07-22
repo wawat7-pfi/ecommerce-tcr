@@ -1,0 +1,38 @@
+.topbar-menu {
+	height: 100%;
+
+	.nav-menu {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		gap: 18px;
+		text-align: left;
+
+		> li {
+			padding: 0;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			position: relative;
+
+			> a {
+				font-weight: 500;
+				color: var(--em-color__dark);
+
+				&:hover {
+					opacity: 0.8;
+				}
+
+				.ecomus-svg-icon,
+				.menu-item-icon {
+					@include font-size(10/16);
+					margin: 2px 8px 0 0;
+				}
+
+				.menu-icon-item-position--right {
+					margin: 2px 0 0 8px;
+				}
+			}
+		}
+	}
+}

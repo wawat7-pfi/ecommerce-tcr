@@ -1,0 +1,246 @@
+.ecomus-lookbook-products {
+
+}
+
+.ecomus-lookbook-products__image,
+.ecomus-lookbook-products__content {
+	width: 50%;
+}
+
+.ecomus-lookbook-products__button-content {
+	width: 36px;
+	height: 36px;
+	top: var( --em-position-y );
+	left: var( --em-position-x );
+	display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ecomus-lookbook-products__button-item {
+	--em-button-color: #000000;
+    --em-button-bg-color: #fff;
+    --em-button-border-color: transparent;
+    --em-button-color-hover: #000000;
+    --em-button-bg-color-hover: #fff;
+    --em-button-border-color-hover: transparent;
+
+	width: 27px;
+	height: 27px;
+	top: var( --em-position-y );
+	left: var( --em-position-x );
+	transform: translate(calc(var(--em-position-x)* -1)) translateY(calc(var(--em-position-y)* -1));
+	border-radius: 50%;
+    background-color: var(--em-color__light);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+	padding: 0;
+	overflow: visible;
+	transition: width .25s ease-in, height .25s ease-in;
+    will-change: width, height;
+
+	&:before,
+	&:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		border-radius: 50%;
+	}
+
+	&:after {
+		display: block;
+		background-image: none;
+		transform: none;
+		width: auto;
+	}
+
+	&.clicked {
+		width: 36px;
+		height: 36px;
+
+		.ecomus-lookbook-products__button-dot {
+			width: 12px;
+			height: 12px;
+		}
+	}
+}
+
+.ecomus-lookbook-products__button-dot {
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background-color: var(--em-color__dark);
+    transition: width .25s ease-in, height .25s ease-in;
+    will-change: width, height;
+}
+
+.ecomus-lookbook-products__sub-title {
+	text-transform: uppercase;
+	margin-bottom: 3px;
+}
+
+.ecomus-lookbook-products__title {
+	margin: 0 0 57px 0;
+}
+
+.ecomus-lookbook__product-type--carousel {
+	--em-spacing-x: 30px;
+	--em-swiper-pagination-spacing: 10px;
+
+	gap: var( --em-spacing-x );
+
+	.swiper-button {
+		--em-arrow-top: calc( ( 100% - 84px ) / 2 );
+
+		width: 33px;
+		height: 33px;
+
+		&.swiper-button-lock {
+			display: none;
+		}
+	}
+
+	.swiper-button.em-button-outline:not(.swiper-button-disabled) {
+		border-color: var( --em-border-color );
+	}
+
+	.swiper-button-next {
+		right: 0;
+
+		/*rtl:raw:
+			left: 0;
+			right: auto;
+		*/
+	}
+	.swiper-button-prev {
+		left: 0;
+
+		/*rtl:raw:
+			right: 0;
+			left: auto;
+		*/
+	}
+
+	.ecomus-lookbook-products__image {
+		width: calc(7 / 12* 100% - var( --em-spacing-x ) / 2);
+	}
+
+	.ecomus-lookbook-products__content {
+		width: calc(5 / 12* 100% - var( --em-spacing-x ) / 2);
+		padding-left: 50px;
+		display: flex;
+		align-items: center;
+	}
+
+	.ecomus-lookbook-products__wrapper {
+		width: 100%;
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+
+	.ecomus-lookbook-products__content-inner {
+		padding-left: 50px;
+		padding-right: 50px;
+		margin-left: -50px;
+	}
+
+	.ecomus-lookbook-products__button-item {
+		&:before,
+		&:after {
+			animation: ripple 3s infinite;
+		}
+	}
+
+	ul.products {
+		flex-wrap: nowrap;
+		margin: 0;
+
+		li.product {
+			flex: 1 0 100%;
+			padding: 0;
+			flex-shrink: 0;
+    		margin-bottom: 0;
+		}
+	}
+}
+
+.ecomus-lookbook__product-type--list {
+	--em-swiper-pagination-spacing: 20px;
+	flex-direction: row-reverse;
+
+	ul.products {
+		&.product-card-layout-list {
+			margin: 0;
+
+			li.product {
+				transition: .35s linear;
+				margin-bottom: 30px;
+				padding: 0;
+
+				.product-featured-icons,
+				.em-product-countdown {
+					display: none;
+				}
+
+				.product-inner {
+					padding-bottom: 30px;
+					border-bottom-style: dashed;
+				}
+			}
+		}
+	}
+
+	.ecomus-lookbook-products__product-price {
+		margin-bottom: 17px;
+	}
+
+	.ecomus-lookbook-products__product-summary {
+		--em-input-bg-color: transparent;
+	}
+
+	.ecomus-lookbook-products__button-item {
+		&:before,
+		&:after {
+			animation: rippleDark 3s infinite;
+		}
+
+		&:before {
+			animation-delay: .9s;
+		}
+
+		&:after {
+			animation-delay: .5s;
+		}
+
+		&:hover {
+			width: 36px;
+			height: 36px;
+
+			.ecomus-lookbook-products__button-dot {
+				width: 12px;
+				height: 12px;
+			}
+		}
+	}
+
+	.ecomus-lookbook-products__button {
+		--em-button-icon-spacing: 5px;
+
+		padding-left: 94px;
+		padding-right: 94px;
+
+		&.loading {
+			--em-loading-color: #fff;
+		}
+	}
+}
+
+.ecomus-lookbook-products__product {
+	select {
+		max-width: 200px;
+	}
+}

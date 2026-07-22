@@ -1,0 +1,40 @@
+.currency-popover {
+    .popover__content {
+        .current {
+            display: none;
+        }
+    }
+
+    .currency-dropdown {
+        ul {
+            list-style: none;
+            padding: 0 20px;
+            margin: 0;
+        }
+
+        li {
+            a {
+                display: block;
+                width: auto;
+                height: auto;
+                margin: 0;
+                padding: 5px 0;
+                color: var(--em-color__dark);
+                opacity: 1;
+            }
+
+            img {
+                --em-image-rounded: 0px;
+                max-width: 16px;
+                margin-right: 5px;
+                margin-bottom: 2px;
+            }
+
+            &.active {
+                a {
+                    color: var(--em-color__primary);
+                }
+            }
+        }
+    }
+}

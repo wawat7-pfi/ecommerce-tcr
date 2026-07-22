@@ -1,0 +1,14 @@
+.header-wishlist__icon {
+	--em-button-font-size: 20px;
+}
+
+.header-wishlist__icon-text {
+	--em-button-icon-size: 20px;
+	@include font-size(16/16);
+
+	.header-wishlist__counter {
+		top: -11px;
+    	left: 18px;
+		right: auto;
+	}
+}

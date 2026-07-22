@@ -1,0 +1,14 @@
+.header-compare__icon {
+	--em-button-font-size: 18px;
+}
+
+.header-compare__icon-text {
+	--em-button-icon-size: 16px;
+	@include font-size(16/16);
+
+	.header-compare__counter {
+		top: -11px;
+		left: 18px;
+		right: auto;
+	}
+}

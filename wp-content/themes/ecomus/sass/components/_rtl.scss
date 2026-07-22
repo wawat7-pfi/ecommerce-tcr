@@ -1,0 +1,75 @@
+.ecomus-rtl-smart {
+	.ecomus-slides-elementor .ecomus-slides-elementor__item,
+	.page-header {
+		&:before {
+			/*rtl:raw:
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: auto;
+				height: auto;
+				background-image: inherit;
+				background-position-x: inherit;
+				background-position-y: inherit;
+				background-size: inherit;
+				background-repeat-x: inherit;
+				background-repeat-y: inherit;
+				background-attachment: inherit;
+				background-origin: inherit;
+				background-clip: inherit;
+				background-color: inherit;
+				transform: rotateY(180deg);
+				border-radius: inherit;
+			*/
+		}
+	}
+
+	.ecomus-images-hotspot__image,
+	.ecomus-image-hotspot__image,
+	.ecomus-product-category-tabs__images,
+	.ecomus-lookbook-products__image-inner,
+	.ecomus-testimonial__photo {
+		img {
+			/*rtl:raw:
+				transform: rotateY(180deg);
+			*/
+		}
+	}
+}
+
+body.rtl.ecomus-rtl-smart {
+	.e-con {
+		--padding-inline-start: var(--padding-left);
+		--padding-inline-end: var(--padding-right);
+		--margin-inline-start: var(--margin-left);
+    	--margin-inline-end: var(--margin-right);
+		border-width: 0;
+
+		&:before {
+			/*rtl:raw:
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: auto;
+				height: auto;
+				background-image: inherit;
+				background-position-x: inherit;
+				background-position-y: inherit;
+				background-size: inherit;
+				background-repeat-x: inherit;
+				background-repeat-y: inherit;
+				background-attachment: inherit;
+				background-origin: inherit;
+				background-clip: inherit;
+				background-color: inherit;
+				transform: rotateY(180deg);
+			*/
+		}
+	}
+}

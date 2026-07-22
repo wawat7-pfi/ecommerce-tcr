@@ -1,0 +1,67 @@
+.popover--open {
+	.mobile-orderby-list {
+		opacity: 1;
+		transition: opacity 0.4s ease-in-out 0.5s;
+	}
+}
+
+.mobile-orderby-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	opacity: 0;
+	transition: opacity 0.15s ease-in-out 0s;
+
+	li {
+		a {
+			display: block;
+			padding: 0 20px;
+			line-height: 30px;
+			position: relative;
+
+			&.selected {
+				background-color: var(--em-border-color);
+
+				&:before,
+				&:after {
+					opacity: 1;
+				}
+			}
+
+			&:before {
+				content: "";
+				width: 3px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+				background-color: var(--em-color__dark);
+				opacity: 0;
+			}
+
+			&:after {
+				content: "";
+				width: 3px;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 3px;
+				z-index: 1;
+				background-color: var(--em-color__light);
+				opacity: 0;
+			}
+		}
+	}
+}
+
+.catalog-toolbar__orderby-button {
+	--em-button-padding-top: 11px;
+    --em-button-padding-bottom: 9px;
+	--em-button-padding-left: 12px;
+    --em-button-padding-right: 12px;
+
+	.ecomus-svg-icon {
+		@include font-size(12/16);
+	}
+}

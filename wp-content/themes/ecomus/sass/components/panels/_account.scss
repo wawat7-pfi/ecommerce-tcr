@@ -1,0 +1,52 @@
+.account-panel {
+	.panel__header {
+		display: flex;
+		align-items: center;
+		padding-left: 30px;
+	}
+
+	.panel__content {
+		padding-left: 30px;
+		padding-right: 22px;
+	}
+}
+
+.account-panel__avatar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 20px;
+	height: 20px;
+	margin-right: 16px;
+	object-fit: cover;
+
+	img {
+		border-radius: 100%;
+	}
+
+}
+
+.account-panel__name {
+	text-transform: capitalize;
+}
+
+.account-panel__links {
+	list-style: none;
+	padding: 10px 0;
+	margin: 0;
+
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	li {
+		padding: 5px 0;
+	}
+
+	a {
+		@include font-size(16/16);
+		font-weight: 500;
+	}
+
+}

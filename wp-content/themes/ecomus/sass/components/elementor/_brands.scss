@@ -1,0 +1,127 @@
+.ecomus-brands-filters {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin: 0 auto 47px;
+	max-width: 1200px;
+}
+
+.ecomus-brands-filters__button {
+	--em-button-bg-color: #fff;
+	--em-button-color: #000;
+	--em-button-padding-top: 11px;
+    --em-button-padding-bottom: 11px;
+    --em-button-padding-left: 15px;
+    --em-button-padding-right: 15px;
+
+	min-width: 42px;
+	border: 1px solid var(--em-border-color);
+
+	&:hover,
+	&.active {
+		--em-button-bg-color: #000;
+		--em-button-color: #fff;
+		--em-border-color: #000;
+	}
+
+	&.disable {
+		color: rgba( 0, 0, 0, 0.2 );
+		pointer-events: none;
+	}
+
+	&:not(:first-child) {
+		text-transform: uppercase;
+	}
+}
+
+.ecomus-brands-filters__items {
+	display: none;
+
+	&.active {
+		display: block;
+		animation: slideInRight 0.5s ease-in-out;
+	}
+}
+
+.ecomus-brands-filters__heading {
+	@include font-size(42/16);
+	line-height: 1;
+	text-transform: uppercase;
+	color: var(--em-color__dark);
+}
+
+.ecomus-brands-filters__item {
+	margin-bottom: 5px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.ecomus-brands--grid {
+	.ecomus-brands-filters__wrapper {
+		margin: 0 -15px;
+		row-gap: 30px;
+		overflow: hidden;
+	}
+
+	.ecomus-brands-filters__items {
+		margin: 0 15px;
+		width: calc( 25% - 30px );
+		padding: 25px 30px;
+		border: 1px solid var(--em-border-color);
+	}
+
+	.ecomus-brands-filters__inner {
+		flex-direction: column;
+	}
+
+	.ecomus-brands-filters__heading {
+		margin-bottom: 15px;
+	}
+}
+
+.ecomus-brands--list {
+	overflow: hidden;
+	.ecomus-brands-filters__wrapper {
+		display: block;
+		border-top: 1px solid var(--em-border-color);
+	}
+
+	.ecomus-brands-filters__items {
+		padding: 15px;
+		border-bottom: 1px solid var(--em-border-color);
+	}
+
+	.ecomus-brands-filters__inner {
+		align-items: center;
+		gap: 20px;
+	}
+
+	.ecomus-brands-filters__heading {
+		width: 100%;
+		max-width: 16.66666667%;
+		padding: 0 30px;
+		text-align: center;
+		border-right: 1px solid var(--em-border-color);
+	}
+
+	.ecomus-brands-filters__content {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 30px;
+		width: 100%;
+	}
+
+	.ecomus-brands-filters__item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+		text-align: center;
+		width: calc( 16.66666667% - 25px );
+	}
+}

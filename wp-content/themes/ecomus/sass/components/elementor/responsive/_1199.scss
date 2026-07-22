@@ -1,0 +1,351 @@
+@media (min-width: 1200px) {
+	.ecomus-slides__dots-position-right {
+		.swiper-pagination-bullets {
+			--em-swiper-pagination-spacing: 63px;
+
+			width: auto;
+			height: 100%;
+			left: auto;
+			flex-direction: column;
+			justify-content: flex-end;
+			gap: 10px;
+		}
+	}
+
+	.ecomus-banner__icon-position--top {
+		.ecomus-banner__button {
+			--em-button-icon-spacing: 20px;
+			--em-button-icon-size: 11px;
+
+			display: inline-flex;
+			flex-direction: column;
+			align-items: flex-end;
+
+			.ecomus-button-text {
+				flex: 1 0 100%;
+			}
+
+		}
+	}
+
+	.ecomus-lookbook__product-type--list {
+		.ecomus-lookbook-products__inner {
+			max-width: 80%;
+			margin-left: 0;
+
+			ul.products {
+				flex-wrap: wrap;
+				transform: none !important;
+				height: auto !important;
+
+				&.product-card-layout-list {
+					li.product {
+						transition: .35s linear;
+
+						.product-thumbnail {
+							max-width: 160px;
+							width: 100%;
+						}
+					}
+				}
+
+				&.has--hover {
+					li.product:not(.is--hover) {
+						opacity: 0.3;
+					}
+				}
+			}
+		}
+
+		.ecomus-lookbook-products__button {
+			@include font-size(16/16);
+		}
+	}
+
+	// Product list
+	.ecomus-product-list--scrollbar {
+		ul.products.product-card-layout-list {
+			max-height: 415px;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
+	}
+
+	// Slides
+	.ecomus-centermode-auto--yes {
+		.elementor-widget-container {
+			overflow: hidden;
+		}
+
+		.swiper {
+			overflow: visible !important;
+		}
+	}
+
+	.ecomus-featured-product__gallery--left.single-product div.product {
+		.woocommerce-product-gallery {
+			flex-direction: row-reverse;
+			justify-content: flex-end;
+
+			.woocommerce-product-gallery__wrapper {
+				margin-left: 10px;
+
+				&:not(.swiper) {
+					margin-left: calc(14% + 10px);
+				}
+			}
+		}
+	}
+
+	// Product carousel
+	// .ecomus-products-carousel {
+	// 	.swiper {
+	// 		padding: 15px;
+	// 		margin: -15px;
+	// 	}
+	// }
+}
+
+@media (max-width: 1499px) and ( min-width: 1150px) {
+	.ecomus-image-box-carousel__inner {
+		.ecomus-image-box-carousel__item--view-all {
+			.ecomus-image-box-carousel__image,
+			.ecomus-image-box-carousel__button {
+				width: 0 !important;
+				min-width: unset !important;
+				overflow: hidden !important;
+				flex: 0 !important;
+				display: none;
+			}
+		}
+	}
+
+	.ecomus-image-box-carousel__view-all-outsite {
+		min-width: 140px;
+		width: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--em-color__light);
+		z-index: 9;
+
+		.ecomus-image-box-carousel__image {
+            max-width: 100px;
+			border-radius: var(--em-image-rounded);
+        }
+	}
+}
+
+@media (min-width: 1150px) {
+
+}
+
+@media (min-width: 1500px) {
+	.ecomus-image-box-carousel__view-all-outsite {
+		display: none;
+	}
+}
+
+@media (max-width: 1499px) and ( min-width: 1150px) {
+	.ecomus-image-box-carousel__inner {
+		.ecomus-image-box-carousel__item--view-all {
+			.ecomus-image-box-carousel__image,
+			.ecomus-image-box-carousel__button {
+				width: 0 !important;
+				min-width: unset !important;
+				overflow: hidden !important;
+				flex: 0 !important;
+				display: none;
+			}
+		}
+	}
+
+	.ecomus-image-box-carousel__view-all-outsite {
+		min-width: 140px;
+		width: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: var(--em-color__light);
+		z-index: 9;
+
+		.ecomus-image-box-carousel__image {
+            max-width: 100px;
+			border-radius: var(--em-image-rounded);
+        }
+	}
+
+	.ecomus-product-category-tabs__items {
+		padding: 46px 30px 56px 30px;
+	}
+}
+
+@media (min-width: 1150px) {
+
+}
+
+@media (min-width: 1500px) {
+	.ecomus-image-box-carousel__view-all-outsite {
+		display: none;
+	}
+
+	.ecomus-product-category-tabs__items {
+		padding: 66px 79px 76px 56px;
+	}
+}
+
+@media (max-width: 1199px) {
+	.ecomus-lookbook__product-type--list {
+		ul.products {
+			&.ecomus-lookbook-products__products {
+				flex-wrap: nowrap;
+			}
+
+			&.product-card-layout-list {
+				li.product,
+				li.product:last-child {
+					margin-bottom: 0;
+
+					.product-inner {
+						gap: 20px;
+						padding-bottom: 0;
+						border: none;
+					}
+				}
+			}
+		}
+
+		.ecomus-lookbook-products__button-item {
+			&:hover {
+				width: 30px;
+				height: 30px;
+
+				.ecomus-lookbook-products__button-dot {
+					width: 8px;
+					height: 8px;
+				}
+			}
+		}
+
+		.ecomus-lookbook-products__button {
+			margin-top: 20px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+
+	// Lookbook Products
+    .ecomus-lookbook__product-type--carousel {
+        .ecomus-lookbook-products__image,
+        .ecomus-lookbook-products__content {
+            width: calc(6 / 12* 100% - var(--em-spacing-x) / 2);
+        }
+
+        .ecomus-lookbook-products__content {
+            padding-left: 20px;
+        }
+
+        .ecomus-lookbook-products__wrapper {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+
+    .ecomus-lookbook-products__title {
+        @include font-size(40/18);
+        margin: 0 0 32px 0;
+    }
+
+	.ecomus-lookbook-products__button-content {
+		width: 30px;
+		height: 30px;
+	}
+
+	.ecomus-lookbook-products__button-item {
+		width: 24px;
+		height: 24px;
+
+		&.clicked {
+			width: 30px;
+			height: 30px;
+
+			.ecomus-lookbook-products__button-dot {
+				width: 8px;
+				height: 8px;
+			}
+		}
+	}
+
+	.ecomus-lookbook-products__button-dot {
+		width: 8px;
+		height: 8px;
+	}
+
+
+	// Banner
+	.ecomus-banner__icon-position--top {
+		.ecomus-banner__button {
+			.ecomus-align-icon-left {
+				order: 2;
+			}
+		}
+	}
+
+	// Video banner
+	.ecomus-video-banner {
+        padding: 5%;
+    }
+
+	// Video popup
+	.ecomus-video-popup__marker {
+		width: 80px;
+		height: 80px;
+
+		.ecomus-svg-icon {
+			@include font-size(16/16);
+		}
+	}
+
+	// Image box carousel
+	.ecomus-slidesperview-auto--yes {
+		.swiper-item-empty {
+			// display: none;
+		}
+	}
+
+	// Testimonial carousel 4
+	.ecomus-testimonial-carousel-4__content {
+		@include font-size(20/16);
+	}
+
+	.ecomus-testimonial-carousel-4__positioning {
+		gap: 40px;
+		margin-top: 31px;
+	}
+
+	.ecomus-featured-product__gallery--left.single-product div.product {
+		.woocommerce-product-gallery {
+			flex-direction: column;
+
+			.woocommerce-product-gallery__wrapper {
+				width: 100%;
+				margin-bottom: 10px;
+				margin-left: 0;
+			}
+
+			.ecomus-product-gallery-thumbnails {
+				width: 100%;
+			}
+
+			.flex-control-nav {
+				flex-direction: row;
+			}
+		}
+	}
+}
+
+@media (max-width: 1149px) {
+	.ecomus-image-box-carousel__view-all-outsite {
+		display: none;
+	}
+}

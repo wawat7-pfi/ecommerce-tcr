@@ -1,0 +1,11 @@
+#woocommerce-product-data ul.wc-tabs li.product_variation_compare_options a::before {
+    content: "\f211";
+}
+
+#woocommerce-product-data ul.wc-tabs li.product_badges_options a::before {
+    content: "\f468";
+}
+
+#woocommerce-product-data ul.wc-tabs li.product_attributes_options a::before {
+	content: "\f157";
+}

@@ -1,0 +1,25 @@
+@mixin input(){
+	color: var(--em-input-color);
+	border-width: var(--em-input-border-width);
+	border-style: solid;
+	border-color: var(--em-input-border-color);
+	outline: none;
+	transition: 0.4s;
+	font-size: var(--em-input-font-size);
+	padding: var(--em-input-padding-y) var(--em-input-padding-x);
+	background-color: var(--em-input-bg-color);
+	border-radius: var(--em-input-rounded);
+	-webkit-appearance: none;
+	line-height: normal;
+
+	&:hover,
+	&:active,
+	&:focus {
+		border-color: var(--em-input-border-color-hover);
+	}
+
+	&::placeholder {
+		font-size: var(--em-input-placeholder-font-size);
+		color: var(--em-input-color);
+	}
+}

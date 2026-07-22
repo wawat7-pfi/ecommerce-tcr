@@ -1,0 +1,92 @@
+.ecomus-image-box-grid__inner {
+    column-gap: var(--em-image-box-grid-col-gap);
+    row-gap: var(--em-image-box-grid-row-gap);
+    flex-wrap: wrap;
+}
+
+.ecomus-image-box-grid__item {
+    width: calc( ( 100% / var(--em-image-box-grid-columns) ) - ( var(--em-image-box-grid-col-gap) - ( var(--em-image-box-grid-col-gap) / var(--em-image-box-grid-columns) ) ) );
+}
+
+.ecomus-image-box-grid__image {
+    .ecomus-image-box-grid__link {
+        @include font-size(10/16);
+        max-width: 99px;
+        border-radius: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+
+        .ecomus-svg-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid;
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            display: grid;
+            place-content: center;
+        }
+
+        &:hover {
+            border-color: #DB1215;
+        }
+    }
+
+    &[data-type="text"] {
+        .ecomus-image-box-grid__link {
+            background-color: #DB1215;
+
+            .ecomus-image-box-grid__text {
+                border-color: #DB1215;
+            }
+        }
+    }
+}
+
+.ecomus-image-box-grid__text {
+    @include font-size(32/16);
+    color: var(--em-color__light);
+}
+
+.ecomus-image-box-grid__badges {
+    top: 0;
+    right: 50%;
+    padding: 2px 5px;
+    width: fit-content;
+    @include font-size(10/16);
+    color: var(--em-color__light);
+    background-color: var(--em-color__dark);
+    border-radius: 10px;
+}
+
+.ecomus-image-box-grid__title {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.title-line-no {
+    .ecomus-image-box-grid__title {
+        white-space: normal;
+    }
+}
+
+.ecomus-image-box-grid__content {
+    padding-top: 17px;
+}
+
+.ecomus-image-box-grid-scroll--yes {
+    overflow: hidden;
+
+    .ecomus-image-box-grid__inner {
+        @include scrollbar();
+    }
+
+    .ecomus-image-box-grid__item {
+        flex-shrink: 0;
+    }
+}

@@ -1,0 +1,43 @@
+.em-font-normal {
+	@include font-normal();
+}
+
+.em-font-medium {
+	@include font-medium();
+}
+
+.em-font-semibold {
+	@include font-semibold();
+}
+
+.em-font-bold {
+	@include font-bold();
+}
+
+.em-font-extrabold {
+	@include font-extrabold();
+}
+
+.em-font-h1 {
+	@include font-h1();
+}
+
+.em-font-h2 {
+	@include font-h2();
+}
+
+.em-font-h3 {
+	@include font-h3();
+}
+
+.em-font-h4 {
+	@include font-h4();
+}
+
+.em-font-h5 {
+	@include font-h5();
+}
+
+.em-font-h6 {
+	@include font-h6();
+}

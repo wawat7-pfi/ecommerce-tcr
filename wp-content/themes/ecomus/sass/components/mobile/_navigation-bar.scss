@@ -1,0 +1,90 @@
+.ecomus-mobile-navigation-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 801;
+	background-color: var( --em-color__light );
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding: 7px 15px;
+	height: 67px;
+
+	--em-color__navigation-bar--box-shadow: rgba(0, 0, 0, 0.08);
+	box-shadow: 0 -4px 10px 0 var( --em-color__navigation-bar--box-shadow );
+
+	overflow-x: auto;
+    overflow-y: hidden;
+	scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+	overscroll-behavior-x: contain;
+	scrollbar-width: 1px;
+	scrollbar-color: var(--em-color__grayer);
+
+	&::-webkit-scrollbar-thumb {
+		background-color: transparent;
+		border-radius: 8px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(0, 0, 0, 0.16);
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: rgba(255, 255, 255, 0.05);
+	}
+}
+
+.ecomus-mobile-navigation-bar__item {
+	height: 100%;
+	width: 20%;
+}
+
+.ecomus-mobile-navigation-bar__icon {
+	--em-button-color: #000000;
+	--em-button-color-hover: var(--em-button-color);
+    --em-button-bg-color: transparent;
+    --em-button-bg-color-hover: transparent;
+    --em-button-border-color-hover: transparent;
+
+	@include font-size(12/16);
+	gap: 9px;
+	height: 100%;
+
+	.ecomus-svg-icon {
+		@include font-size(18/16);
+
+		/*rtl:raw:
+			transform: rotateY(0);
+		*/
+	}
+
+	.ecomus-svg-icon--shopping-cart {
+		@include font-size(24/16);
+		margin-bottom: -5px;
+	}
+
+	.ecomus-svg-icon--home {
+		@include font-size(22/16);
+		max-height: 18px;
+	}
+
+	.ecomus-svg-icon--home {
+		@include font-size(22/16);
+		max-height: 18px;
+	}
+
+	.header-cart__counter,
+	.header-wishlist__counter {
+		top: 0;
+		right: 2px;
+	}
+
+	&.em-button-light {
+		--em-button-color-hover: var(--em-button-color);
+		--em-button-bg-color: transparent;
+		--em-button-bg-color-hover: transparent;
+		--em-button-border-color-hover: transparent;
+	}
+}

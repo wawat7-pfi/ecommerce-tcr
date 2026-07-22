@@ -1,0 +1,74 @@
+.ecomus-video-banner__featured-image,
+.ecomus-video-banner__video-thumbnail {
+	height: 100%;
+}
+
+.ecomus-video-banner__video-thumbnail {
+	z-index: 1;
+}
+
+.ecomus-video-banner {
+	--em-video-banner-ratio: 56.25%;
+	position: relative;
+	overflow: hidden;
+}
+
+.ecomus-video-banner__featured-image {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+	padding-bottom: var(--em-video-banner-ratio);
+	overflow: hidden;
+
+	video,
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+
+.ecomus-video-banner__wrapper {
+	justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 100%;
+	padding: 0;
+}
+
+.ecomus-video-banner__content {
+    padding: 76px 53px;
+	background-color: #212328;
+	color: var(--em-color__light);
+	border-radius: 20px;
+}
+
+.ecomus-video-banner__before-title {
+	@include font-size(14/16);
+	font-weight: 600;
+	color: inherit;
+	margin: 0 0 11px 0;
+}
+
+.ecomus-video-banner__title {
+	color: inherit;
+	margin: 0;
+}
+
+.ecomus-video-banner-button {
+	--em-button-padding-top: 16px;
+	--em-button-padding-bottom: 16px;
+	--em-button-padding-right: 32px;
+	--em-button-padding-left: 32px;
+	--em-button-font-size: 18px;
+	--em-button-icon-size: 12px;
+	margin-top: 35px;
+}

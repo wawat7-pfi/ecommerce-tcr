@@ -1,0 +1,46 @@
+@media (max-width: 1640px) {
+	.elementor-element .ecomus-shoppable-video {
+		.swiper-button {
+			&.ecomus-swiper-button--outside {
+				&.elementor-swiper-button-prev {
+					left: -23px;
+				}
+
+				&.elementor-swiper-button-next {
+					right: -23px;
+				}
+			}
+		}
+	}
+
+	.ecomus-rtl-smart .elementor-element .ecomus-shoppable-video {
+		.swiper-button {
+			&.ecomus-swiper-button--outside {
+				&.elementor-swiper-button-prev {
+					left: -23px;
+				}
+
+				&.elementor-swiper-button-next {
+					right: -23px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1599px){
+    // Testimonial carousel 2
+    .elementor-widget-ecomus-testimonial-carousel-2.elementor-element {
+        .elementor-widget-container {
+            .swiper-button {
+                &.elementor-swiper-button-prev {
+                    left: -23px;
+                }
+
+                &.elementor-swiper-button-next {
+                    right: -23px;
+                }
+            }
+        }
+    }
+}

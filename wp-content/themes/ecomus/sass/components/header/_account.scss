@@ -1,0 +1,8 @@
+.header-account__icon {
+	--em-button-font-size: 18px;
+}
+
+.header-account__icon-text {
+	--em-button-icon-size: 18px;
+	@include font-size(16/16);
+}

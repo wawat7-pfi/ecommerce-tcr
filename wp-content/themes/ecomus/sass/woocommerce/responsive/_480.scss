@@ -1,0 +1,28 @@
+@media (max-width: 480px) {
+	ul.products {
+        &.product-card-layout-list {
+            li.product {
+                .short-description {
+                    display: none;
+                }
+            }
+        }
+
+        &.product-card-layout-2 {
+            li.product .product-featured-icons .product-loop-button:not(.em-button-icon) {
+                width: 36px;
+                --em-button-height: 36px;
+
+               & > span:last-child {
+                    display: none;
+                }
+            }
+        }
+
+
+    }
+
+    .woocommerce-cart table.woocommerce-cart-form__contents .coupon .input-text {
+        max-width: 60%;
+    }
+}

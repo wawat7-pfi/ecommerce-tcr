@@ -1,0 +1,14 @@
+.header-hamburger {
+	padding: 0 20px 0 0;
+
+	.ecomus-svg-icon {
+		@include font-size(22/16);
+		margin: 0;
+	}
+}
+
+.hamburger-menu__text {
+	@include font-size(14/16);
+	text-transform: uppercase;
+	font-weight: 800;
+}

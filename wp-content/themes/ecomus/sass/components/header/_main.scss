@@ -1,0 +1,159 @@
+.site-header {
+	.site-header__container {
+		display: flex;
+		align-items: center;
+		height: 100%;
+    }
+
+	.has-menu {
+		.primary-navigation {
+			position: static;
+		}
+	}
+}
+
+.header-contents {
+	position: relative;
+}
+
+.header-items {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	flex: 1;
+	color: var( --em-header-color );
+
+	> * {
+		position: relative;
+	}
+
+	.em-button-icon {
+		--em-button-width: 40px;
+		--em-button-height: 40px;
+	}
+
+	> a,
+	> button,
+	> .em-button {
+		&:not(:hover) {
+			color: inherit;
+		}
+	}
+}
+
+.header-left-items {
+	text-align: left;
+	justify-content: flex-start;
+	padding-right: 10px;
+
+	> * {
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.nav-menu .menu-item-pos-alignment--left.menu-item-pos-static {
+		position: static;
+	}
+}
+
+.header-center-items {
+	text-align: center;
+	justify-content: center;
+	padding-left: 10px;
+	padding-right: 10px;
+
+	> * {
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.header-right-items {
+	text-align: right;
+	justify-content: flex-end;
+	padding-left: 10px;
+	margin: 0 -10px;
+	> * {
+		padding: 0 10px;
+	}
+
+	.nav-menu .menu-item-pos-alignment--right.menu-item-pos-static {
+		position: static;
+	}
+}
+
+.header-main {
+	--em-header-main-border-color: transparent;
+	--em-header-main-shadow-color: transparent;
+	--em-header-main-bg-color: transparent;
+	height: 85px;
+	border-bottom: 1px solid var( --em-header-main-border-color );
+	box-shadow: 0 1px 3px var( --em-header-main-shadow-color );
+	background-color: var( --em-header-main-bg-color );
+}
+
+.header-bottom {
+	--em-header-bottom-border-color: transparent;
+	--em-header-bottom-shadow-color: transparent;
+	--em-header-bottom-bg-color: transparent;
+
+	height: 60px;
+	border-bottom: 1px solid var( --em-header-bottom-border-color );
+	box-shadow: 0 1px 3px var( --em-header-bottom-shadow-color );
+	background-color: var( --em-header-bottom-bg-color );
+}
+
+.ecomus-header-main-divider {
+	.header-main {
+		--em-header-main-border-color: var( --em-border-color );
+	}
+}
+
+.ecomus-header-bottom-divider {
+	.header-bottom {
+		--em-header-bottom-border-color: var( --em-border-color );
+	}
+}
+
+.header-counter {
+	@include font-size(10/16);
+    line-height: 19px;
+    height: 18px;
+    min-width: 18px;
+    text-align: center;
+    padding: 0 3px;
+    font-weight: 500;
+    border-radius: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    color: var(--em-text-color-on-primary);
+    background-color: var(--em-color__primary);
+}
+
+.header-v2 {
+	.header-main {
+		height: 67px;
+	}
+}
+
+.header-v6 {
+	.header-main {
+		height: 103px;
+	}
+
+	.header-bottom {
+		height: 80px;
+	}
+}

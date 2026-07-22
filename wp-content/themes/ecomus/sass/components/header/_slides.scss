@@ -1,0 +1,31 @@
+.topbar-slides {
+	max-width: 700px;
+	width: 100%;
+}
+
+.topbar-slides__item {
+	font-weight: 500;
+	color: var(--em-color__dark);
+	white-space: nowrap;
+
+	a {
+		display: inline-block;
+		line-height: 1;
+		color: var( --em-color__primary );
+		border-bottom: 1px solid;
+
+		svg {
+			margin-left: 5px;
+
+			/*rtl:raw:
+				margin-left: 0;
+				margin-right: 5px;
+				transform: rotateY(180deg);
+			*/
+		}
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.ecomus-button-carousel {
+	.swiper-pagination-lock {
+		margin: 0;
+	}
+
+	.swiper-pagination-bullets {
+		--em-swiper-pagination-spacing: 15px;
+	}
+
+	.swiper-pagination {
+		display: block;
+	}
+}
+
+.ecomus-button-carousel__item {
+	display: inline-flex;
+	width: auto;
+
+	.ecomus-button-link {
+		--em-button-padding-left: 30px;
+		--em-button-padding-right: 30px;
+		--em-button-padding-bottom: 17px;
+		--em-button-padding-top: 17px;
+		@include font-size(16/16);
+
+		&.em-button-subtle,
+		&.em-button-text {
+			--em-button-padding-left: 0;
+			--em-button-padding-right: 0;
+			--em-button-padding-top: 0;
+			--em-button-padding-bottom: 3px;
+		}
+	}
+}
+
+@media screen and (min-width: 1025px) {
+	.navigation-class-none {
+		.swiper-pagination:not(.pagination-heading) {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1024px) and ( min-width: 768px) {
+	.navigation-class--tabletnone {
+		.swiper-pagination {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+	.navigation-class--mobilenone {
+		.swiper-pagination {
+			display: none;
+		}
+	}
+}

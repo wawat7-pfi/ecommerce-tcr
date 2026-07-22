@@ -1,0 +1,185 @@
+// Button
+@mixin button() {
+	font-size: var(--em-button-font-size);
+	background-color: var(--em-button-bg-color);
+	color: var(--em-button-color);
+	border: 1px solid var(--em-button-border-color);
+	padding: var(--em-button-padding-top) var(--em-button-padding-right) var(--em-button-padding-bottom) var(--em-button-padding-left);
+	line-height: var(--em-button-line-height);
+	border-radius: var(--em-button-rounded);
+	font-weight: var(--em-button-font-weight);
+	gap: var(--em-button-icon-spacing);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.4s;
+	cursor: pointer;
+	vertical-align: middle;
+
+	transition: 0.25s;
+
+	&:hover,
+	&:active  {
+		color: var(--em-button-color-hover);
+		background-color: var(--em-button-bg-color-hover);
+		border-color: var(--em-button-border-color-hover);
+	}
+
+	&:hover:after {
+		animation: shine 0.75s cubic-bezier(0.01, 0.56, 1, 1);
+	}
+
+	&.disabled {
+		opacity: 0.3;
+		pointer-events: none;
+		cursor: not-allowed;
+	}
+
+	.ecomus-svg-icon {
+		font-size: var( --em-button-icon-size );
+
+		/*rtl:raw:
+			transform: rotateY(180deg);
+		*/
+	}
+
+	&.pswp__button {
+		&::after {
+			display: none;
+		}
+	}
+
+	&.loading {
+		--em-loading-color: var(--em-button-color);
+		@include em-loading();
+
+		&:hover,
+		&:active {
+			--em-loading-color: var(--em-button-color-hover);
+		}
+	}
+}
+
+@mixin button-hover-eff() {
+	position: relative;
+	overflow: hidden;
+	&:after {
+		background-image: linear-gradient(90deg, transparent, var(--em-button-eff-bg-color-hover, transparent), transparent);
+		content: "";
+		left: 150%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		transform: skew(-20deg);
+		width: 200%;
+	}
+}
+
+@mixin button-primary() {
+	--em-button-color: var(--em-text-color-on-primary);
+	--em-button-color-hover: var(--em-text-color-on-primary);
+	--em-button-bg-color: var(--em-color__primary);
+	--em-button-bg-color-hover: var(--em-color__primary);
+	--em-button-padding-top: 16px;
+	--em-button-padding-bottom: 16px;
+	--em-button-eff-bg-color-hover: rgb(from var(--em-button-color) r g b / 0.5);
+	border: none;
+}
+
+@mixin button-light() {
+	--em-button-bg-color: #ffffff;
+	--em-button-bg-color-hover: #000000;
+	--em-button-color: #000000;
+	--em-button-color-hover: #fff;
+	--em-button-eff-bg-color-hover: rgba(0, 0, 0, 0.25);
+	border: none;
+
+}
+
+@mixin button-outline() {
+	--em-button-color: #000000;
+	--em-button-color-hover: #ffffff;
+	--em-button-bg-color: transparent;
+	--em-button-bg-color-hover: #000000;
+	--em-button-border-color: #EBEBEB;
+	--em-button-border-color-hover: var(--em-button-bg-color-hover);
+	--em-button-eff-bg-color-hover: rgba(255, 255, 255, 0.25);
+
+	&:after {
+		display: none;
+	}
+}
+
+@mixin button-outline-dark() {
+	--em-button-color: #000000;
+	--em-button-color-hover: var(--em-color__primary);
+	--em-button-bg-color: transparent;
+	--em-button-bg-color-hover: transparent;
+	--em-button-border-color: #000000;
+	--em-button-border-color-hover: var(--em-color__primary);
+	--em-button-eff-bg-color-hover: transparent;
+
+	&.loading {
+		&:hover {
+			--em-loading-color: var(--em-color__primary);
+		}
+	}
+
+	&:after {
+		display: none;
+	}
+}
+
+@mixin button-subtle() {
+	--em-button-color: #000000;
+	--em-button-color-hover: var(--em-color__primary);
+	--em-button-bg-color: transparent;
+	--em-button-bg-color-hover: transparent;
+	--em-button-padding-top: 0;
+	--em-button-padding-right: 0;
+	--em-button-padding-bottom: 3px;
+	--em-button-padding-left: 0;
+	--em-button-rounded: 0;
+	--em-button-border-color: var(--em-button-color);
+	--em-button-border-color-hover: var(--em-button-color-hover);
+	border-width: 0 0 1px 0;
+
+	&:after {
+		display: none;
+	}
+}
+
+@mixin button-text() {
+	--em-button-color: #000000;
+	--em-button-color-hover: var(--em-color__primary);
+	--em-button-bg-color: transparent;
+	--em-button-bg-color-hover: transparent;
+	--em-button-padding-top: 0;
+	--em-button-padding-right: 0;
+	--em-button-padding-bottom: 0;
+	--em-button-padding-left: 0;
+	--em-button-rounded: 0;
+	border: none;
+
+	&:after {
+		display: none;
+	}
+}
+
+@mixin button-icon() {
+	--em-button-width: 46px;
+	--em-button-height: 46px;
+	--em-button-font-size: 10px;
+	--em-button-icon-size: var(--em-button-font-size);
+	padding: 0;
+	width: var(--em-button-width);
+	height: var(--em-button-height);
+
+	.ecomus-button-text {
+		display: none;
+	}
+
+	.ecomus-svg-icon {
+		padding-bottom: 0;
+	}
+}

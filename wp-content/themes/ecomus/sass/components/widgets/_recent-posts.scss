@@ -1,0 +1,37 @@
+.ecomus-recent-posts-widget {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		padding: 10px 0;
+		gap: 16px;
+
+		&:first-child {
+			padding-top: 0;
+		}
+
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
+
+	.post-thumbnail {
+		max-width: 92px;
+	}
+
+	.post-summary {
+		align-items: start;
+	}
+
+	.em-button-category {
+		margin-bottom: 10px;
+	}
+
+	.post-title {
+		font-weight: 500;
+		line-height: 1.6;
+	}
+}

@@ -1,0 +1,156 @@
+body {
+	.blockUI.blockOverlay {
+        position: relative;
+        background-color: rgba( 255, 255, 255, 0.6) !important;
+        background-image: none !important;
+    }
+}
+
+.offscreen-panel {
+	--em-panel-content-width: 410px;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1100;
+	display: none;
+
+	&.modal-above-panel {
+		z-index: 1050;
+	}
+
+	&.modal-above-panel__quickadd {
+		z-index: 999;
+	}
+}
+
+.offscreen-panel--side-left {
+	.panel__container {
+		left: 0;
+		right: auto;
+		transform: translateX(-100%);
+	}
+
+	.panel__button-close {
+		left: 20px;
+		right: auto;
+	}
+
+	.panel__header {
+		text-align: right;
+	}
+}
+
+.offscreen-panel--open {
+	.panel__container {
+		transform: none;
+	}
+
+	.panel__backdrop {
+		cursor: var(--em-cursor-close-icon) 25 25, auto;
+	}
+}
+
+.panel__backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba( 0, 0, 0, 0.2);
+}
+
+.panel__button-close {
+	position: absolute;
+	right: 20px;
+	top: 22px;
+	cursor: pointer;
+	@include font-size(14/16);
+	color: var(--em-color__dark);
+	z-index: 1;
+	transition: color .2s;
+
+	&:hover {
+		color: #db1215;
+	}
+}
+
+.panel__container {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 100%;
+	max-width: var(--em-panel-content-width);
+	width: 100%;
+	margin: 0;
+	background-color: #fff;
+	box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.16);;
+	transform: translateX(100%);
+	transition: transform 0.3s;
+	display: flex;
+	flex-direction: column;
+}
+
+.panel__header {
+	padding: 18px 30px;
+	margin: 0;
+	@include font-size(18/16);
+	color: $color__dark;
+	font-weight: 500;
+	position: relative;
+
+	&:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		height: 1px;
+		background-color: var(--em-border-color);
+		display: block;
+	}
+}
+
+.admin-bar {
+	.offscreen-panel {
+		top: 32px;
+
+		.panel__container {
+			height: calc( 100% - 32px );
+		}
+	}
+}
+
+.mobile-menu__divider {
+	background-color: var(--em-border-color);
+	margin: 15px auto;
+    width: calc( 100% - 64px );
+}
+
+@media ( max-width: 780px ) {
+	.admin-bar {
+		.offscreen-panel {
+			top: 0;
+
+			.panel__container {
+				height: 100%;
+			}
+		}
+	}
+}
+
+@media( max-width: 767px ) {
+	.panel__container {
+		--em-panel-content-width: 90%;
+	}
+}
+
+@import 'mobile-sidebar';
+@import 'mobile-shop';
+@import 'account';
+@import 'cart';
+@import 'single-product-sidebar';
+@import 'hamburger';

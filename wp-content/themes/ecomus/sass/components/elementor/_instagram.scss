@@ -1,0 +1,122 @@
+.ecomus-instagram--elementor {
+	--em-swiper-items-space: 7px;
+	--em-swiper-pagination-spacing: 15px;
+
+	.ecomus-instagram__list {
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		display: flex;
+	}
+
+	.ecomus-instagram__item {
+		transition: 0.5s;
+		width: 20%;
+		margin: 0;
+
+		img {
+			transition: transform 2s cubic-bezier(0,0,.44,1.18);
+		}
+
+		.em-ratio {
+			video {
+				position: absolute;
+				margin: 0;
+				top: 0;
+				left: 0;
+				height: 100%;
+				width: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+
+		.ecomus-instagram__link {
+			border-radius: var(--em-image-rounded);
+
+			&:after {
+				position: absolute;
+				z-index: 2;
+				content: "";
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, .1);
+				top: 0;
+				left: 0;
+				transition: .4s ease .1s;
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+
+		p {
+			margin: 0;
+
+			a.button {
+				--em-button-color: #000000;
+				--em-button-bg-color: #ffffff;
+				--em-button-color-hover: #ffffff;
+				--em-button-bg-color-hover: #000000;
+				--em-button-border-color: transparent;
+				--em-button-rounded: 100%;
+
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate( -50%, -50% );
+				z-index: 3;
+
+				padding: 0;
+				width: 33px;
+				height: 33px;
+
+				.ecomus-svg-icon {
+					--em-button-icon-size: 12px;
+					margin: 0;
+				}
+
+				.ecomus-svg-icon--shopping-cart {
+					--em-button-icon-size: 16px;
+				}
+
+				.add-to-cart__text {
+					display: none;
+				}
+
+				&.loading {
+					@include em-loading();
+					position: absolute;
+
+					.ecomus-svg-icon {
+						opacity: 0;
+					}
+				}
+
+				&:hover {
+					--em-button-color: #ffffff;
+					--em-loading-color: #ffffff;
+					--em-button-bg-color: #000000;
+
+					color: var(--em-color__light);
+				}
+			}
+
+			.wc-forward {
+				display: none;
+			}
+		}
+
+		&:hover {
+			.ecomus-instagram__link:after {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+}
+
+.elementor-element.ecomus-carousel__dots-position-inside .swiper.ecomus-carousel--elementor .swiper-pagination-bullets {
+	position: absolute;
+	margin-top: 0;
+	bottom: var(--em-swiper-pagination-spacing);
+}

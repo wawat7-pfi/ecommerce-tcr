@@ -1,0 +1,95 @@
+.em-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.em-col {
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// Define flex columns
+$i: 12;
+@while $i > 0 {
+    .em-xs-#{$i} {
+        flex: 0 0 $i / 12 * 100%;
+        max-width: $i / 12 * 100% ;
+    }
+
+    $i: $i - 1;
+}
+
+// 5 Columns
+.em-xs-1-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+@media (min-width: 768px) {
+    $i: 12;
+    @while $i > 0 {
+        .em-sm-#{$i} {
+            flex: 0 0 $i / 12 * 100%;
+            max-width: $i / 12 * 100% ;
+        }
+
+        $i: $i - 1;
+    }
+
+    // 5 Columns
+    .em-sm-1-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 992px) {
+    $i: 12;
+    @while $i > 0 {
+        .em-md-#{$i} {
+            flex: 0 0 $i / 12 * 100%;
+            max-width: $i / 12 * 100% ;
+        }
+
+        $i: $i - 1;
+    }
+
+    // 5 Columns
+    .em-md-1-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    $i: 12;
+    @while $i > 0 {
+        .em-lg-#{$i} {
+            flex: 0 0 $i / 12 * 100%;
+            max-width: $i / 12 * 100% ;
+        }
+
+        $i: $i - 1;
+    }
+
+    // 5 Columns
+    .em-lg-1-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+
+@media ( max-width: 767px ) {
+    .em-row-xs {
+        margin-left: -7.5px;
+        margin-right: -7.5px;
+    }
+
+    .em-col-xs {
+        padding-left: 7.5px;
+        padding-right: 7.5px;
+    }
+}

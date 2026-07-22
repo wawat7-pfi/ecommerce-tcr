@@ -1,0 +1,151 @@
+.ecomus-product-price-tables-carousel {
+    --em-price-del-color: rgba(0, 0, 0, 0.5);
+    --em-variation-border-color: #EBEBEB;
+    --em-variation-border-color-selected: #000;
+
+    .product-inner {
+        overflow: hidden;
+    }
+
+    .product-summary {
+        display: flex;
+        flex-direction: column;
+        background-color: #f6f6f6;
+        padding: 26px 37px 48px;
+
+        .add_to_cart_button,
+        .ecomus-rating {
+            display: none !important;
+        }
+    }
+
+    .woocommerce-loop-product__title {
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .product-featured-icons {
+        .button {
+            --em-button-color: #fff;
+            --em-button-bg-color: #000;
+            --em-button-border-color: #000;
+            --em-button-color-hover: #000;
+            --em-button-bg-color-hover: #fff;
+            --em-button-border-color-hover: #fff;
+        }
+    }
+
+    ul.products {
+        li.product {
+            .price {
+                del {
+                    color: var(--em-price-del-color);
+                }
+            }
+
+            .product-variation-items {
+                .product-variation-item {
+                    border-color: var(--em-variation-border-color);
+
+                    &.selected {
+                        border-color: var(--em-variation-border-color-selected);
+                    }
+                }
+            }
+
+            .product-thumbnail {
+                &:hover {
+                    &.product-thumbnails--fadein {
+                        &:not(.hover-swatch) {
+                            img {
+                                opacity: 0;
+                            }
+
+                            .product-thumbnails--fadein-image {
+                                opacity: 1;
+                                transform: scale(var(--em-image-eff-scale-product-card));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.ecomus-product-price-tables-carousel__text {
+    --em-link-color: var(--em-color__base);
+
+    font-weight: 700;
+}
+
+.ecomus-product-price-tables-carousel__description {
+    @include font-size(16/16);
+    font-weight: 500;
+    color: var(--em-color__base);
+    margin-top: 18px;
+    padding-top: 22px;
+    border-top: 1px solid var(--em-border-color);
+
+    ul {
+        &.no-style {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-bottom: 18px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.ecomus-product-price-tables-carousel__button {
+    align-self: center;
+    margin-top: 38px;
+}
+
+.ecomus-product-price-tables-carousel__highlight {
+    --em-color__base: #fff;
+    --em-color__dark: #fff;
+    --em-heading-color: #fff;
+    --em-link-color: #fff;
+    --em-border-color: #333;
+    --em-color-price-sale: #fff;
+    --em-price-del-color: rgba( 255, 255, 255, 0.4 );
+    --em-variation-border-color: #333;
+    --em-variation-border-color-selected: #fff;
+
+    .product-summary {
+        background-color: #141414;
+    }
+
+    .product-featured-icons {
+        .button {
+            --em-button-color: #000;
+            --em-button-bg-color: #fff;
+            --em-button-border-color: #fff;
+            --em-button-color-hover: #fff;
+            --em-button-bg-color-hover: #000;
+            --em-button-border-color-hover: #000;
+            --em-button-eff-bg-color-hover: rgba( 255, 255, 255, 0.25 );
+        }
+    }
+
+    .ecomus-product-price-tables-carousel__button {
+        --em-button-color: #000;
+        --em-button-bg-color: #fff;
+        --em-button-border-color: #fff;
+        --em-button-color-hover: #000;
+        --em-button-bg-color-hover: #fff;
+        --em-button-border-color-hover: #fff;
+        --em-button-eff-bg-color-hover: rgba( 0, 0, 0, 0.25 );
+    }
+}

@@ -1,0 +1,108 @@
+.topbar {
+	min-height: 45px;
+
+	&.has-border {
+		border-bottom: 1px solid var( --em-border-color );
+	}
+}
+
+.topbar-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+
+	&:before,
+	&:after {
+		display: none;
+	}
+}
+
+.topbar-items {
+    display: flex;
+    align-items: center;
+	line-height: 45px;
+}
+
+.topbar-left-items {
+	text-align: left;
+	justify-content: flex-start;
+
+	> * {
+		margin-right: 30px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+.topbar-center-items {
+	text-align: center;
+	justify-content: center;
+	flex: 1;
+
+	> * {
+		margin: 0 17px;
+	}
+}
+
+.topbar-right-items {
+	text-align: right;
+	justify-content: flex-end;
+
+	> * {
+		margin-left: 30px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.topbar-items {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	flex: 1;
+
+	.ecomus-currency-language {
+		.current {
+			padding: 0;
+		}
+
+		a {
+			color: #000;
+		}
+
+		.woocs_flag_view_item_current {
+			color: var(--em-color__primary);
+		}
+	}
+}
+
+.topbar-text {
+	a {
+		--em-link-color: inherit;
+		white-space: nowrap;
+	}
+}
+
+.topbar-custom-text {
+	color: var(--em-color__dark);
+	line-height: normal;
+
+	a {
+		--em-link-color: inherit;
+
+		display: inline-block;
+		text-decoration: underline;
+		white-space: nowrap;
+
+		svg {
+			/*rtl:raw:
+				transform: rotateY(180deg);
+			*/
+		}
+	}
+}

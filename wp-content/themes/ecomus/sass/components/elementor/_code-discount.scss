@@ -1,0 +1,81 @@
+.modal--has-code-discount {
+    &:hover {
+        .ecomus-code-discount__copy {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        input.ecomus-code-discount__input {
+            border-radius: var(--em-input-rounded) 0 0 var(--em-input-rounded);
+        }
+    }
+}
+
+.ecomus-code-discount {
+    --em-input-rounded: 2.5px;
+
+    justify-content: center;
+
+    &:hover {
+        .ecomus-code-discount__copy {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        input.ecomus-code-discount__input {
+            border-radius: var(--em-input-rounded) 0 0 var(--em-input-rounded);
+        }
+    }
+}
+
+.ecomus-code-discount__inner {
+    display: inline-flex;
+}
+
+input.ecomus-code-discount__input {
+    --em-input-color: #000000;
+
+    @include font-size(1);
+    line-height: 1;
+    text-align: center;
+    padding: 12px 22px;
+    background-color: #f2f2f2;
+    border-radius: var(--em-input-rounded);
+    border: none;
+    padding-inline: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 45px;
+}
+
+.ecomus-code-discount__copy {
+    --em-input-color: #000000;
+    --em-button-icon-size: 24px;
+    --em-button-bg-color: #f2f2f2;
+    --em-button-color: #f2f2f2;
+    --em-button-bg-color-hover: #f2f2f2;
+    --em-button-color-hover: #f2f2f2;
+    --em-button-padding-top: 10px;
+    --em-button-padding-right: 10.5px;
+    --em-button-padding-bottom: 10px;
+    --em-button-padding-left: 10.5px;
+
+    right: 0;
+    border: none;
+    transform: translateX(100%);
+    border-radius: 0 var(--em-input-rounded) var(--em-input-rounded) 0;
+    min-height: 45px;
+    overflow: visible;
+    visibility: hidden;
+    opacity: 0;
+
+    .ecomus-svg-icon {
+        svg {
+            stroke: #000000;
+        }
+    }
+
+    &:after {
+        display: none;
+    }
+}

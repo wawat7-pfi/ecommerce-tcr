@@ -1,0 +1,61 @@
+.ask-question-content {
+	label {
+		display: block;
+		margin-bottom: 13px;
+	}
+
+	input {
+		width: 100%;
+	}
+
+	p {
+		margin: 0;
+		position: relative;
+	}
+
+	form {
+		> p:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	.wpcf7-form-control-wrap {
+		display: block;
+		margin-top: 5px;
+	}
+
+	.wpcf7-spinner {
+		display: none;
+	}
+
+	.wpcf7 form .wpcf7-response-output {
+		margin: 19px 0 0 0;
+	}
+
+	.submitting {
+		.wpcf7-spinner {
+			@include em-loading();
+			--em-loading-color: var(--em-button-color);
+			display: block;
+			background-color: transparent;
+			opacity: 1;
+			width: auto;
+			height: auto;
+			position: absolute;
+			left: calc(50% - 25px);
+			top: 50%;
+			transform: translate(-50%, -50%);
+
+			&:before {
+				background-color: transparent;
+				transform-origin: initial;
+			}
+		}
+
+		.wpcf7-submit {
+			color: var(--em-button-bg-color);
+			pointer-events: none;
+			opacity: 0.3;
+		}
+	}
+}

@@ -1,0 +1,69 @@
+.em-button-go-top {
+    --cricle-degrees: 0deg;
+
+    right: 40px;
+    bottom: 55px;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .4s ease, visibility .4s ease, margin-right 0s, border-color .25s ease-in,color .25s ease-in, bottom .3s ease .1s;
+    border: none;
+
+    &.em-button {
+        --em-button-font-size: 12px;
+        --em-button-width: 40px;
+        --em-button-height: 40px;
+        --em-button-color: #000;
+        --em-button-color-hover: #000;
+        --em-button-bg-color: #fff;
+        --em-button-bg-color-hover: #fff;
+        --em-button-eff-bg-color-hover: #fff;
+    }
+
+    .ecomus-svg-icon {
+        position: relative;
+        z-index: 3;
+    }
+
+    &::before {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: var(--em-button-rounded);
+        background: conic-gradient(#000 var(--cricle-degrees), #eee var(--cricle-degrees));
+        z-index: 1;
+    }
+
+    &::after {
+        display: inline-block;
+        content: '';
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        bottom: 1px;
+        left: 1px;
+        border-radius: var(--em-button-rounded);
+        background-color: var(--em-color__light);
+        z-index: 2;
+        transform: none;
+        width: auto;
+    }
+
+    &:hover {
+        &::after {
+            animation: none;
+            border: none;
+        }
+    }
+
+    &.show-scroll {
+        pointer-events: auto;
+        opacity: 1;
+        visibility: visible;
+        z-index: 99;
+    }
+}

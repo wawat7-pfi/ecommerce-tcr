@@ -1,0 +1,59 @@
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6 {
+	font-family: var(--em-heading-font), sans-serif;
+	clear: both;
+	line-height: var(--em-heading-line-height);
+	color: var(--em-heading-color);
+	font-weight: var(--em-heading-font-weight);
+	text-transform: var(--em-heading-text-transform);
+}
+
+h1,
+.h1 {
+	@include font-size(80/16);
+	margin: 0.67em 0;
+}
+
+h2,
+.h2 {
+	@include font-size(68/16);
+	margin: 0.83em 0;
+}
+
+h3,
+.h3 {
+	@include font-size(52/16);
+	margin: 1em 0;
+}
+
+h4,
+.h4 {
+	@include font-size(42/16);
+	margin: 1.33em 0;
+}
+
+h5,
+.h5 {
+	@include font-size(28/16);
+	margin: 1.67em 0;
+}
+
+h6,
+.h6 {
+	@include font-size(20/16);
+	margin: 2.33em 0;
+}
+
+.text-body {
+	@include font-size(14/16);
+	margin: 0;
+}

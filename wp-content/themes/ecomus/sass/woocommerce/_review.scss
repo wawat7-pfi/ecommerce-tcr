@@ -1,0 +1,319 @@
+.single-product {
+	div.product {
+		.woocommerce-Reviews {
+			position: relative;
+			display: flex;
+
+			.ecomus-product-rating {
+				margin-right: 219px;
+
+				.ecomus-product-rating__wrapper {
+					display: flex;
+					align-items: center;
+					gap: 11px;
+					margin-top: 21px;
+					margin-bottom: 30px;
+				}
+
+				.ecomus-product-rating__rating-count {
+					.star-rating {
+						@include font-size(24/16);
+						width: 5.3em;
+						height: 1.618em;
+					}
+
+					.ecomus-product-rating__count {
+						@include font-size(14/16);
+						color: $color__dark;
+					}
+				}
+			}
+
+			#comments {
+				flex: auto;
+
+				.ecomus-form-review {
+					float: right;
+				}
+			}
+
+			.woocommerce-Reviews-title {
+				@include font-size(28/16);
+				line-height: 1;
+				font-weight: 400;
+				margin: 0 0 14px;
+				white-space: nowrap;
+			}
+
+			.ecomus-product-rating__title {
+				border-bottom: none;
+			}
+
+			ol.commentlist {
+				margin: 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					display: block;
+					position: relative;
+					padding: 0 0 19px;
+					margin-bottom: 30px;
+					border-bottom: 1px solid $color__border-main;
+
+					.comment-wrapper,
+					.comment_container {
+						display: flex;
+					}
+
+					img.avatar {
+						width: 40px;
+						height: 40px;
+						border: none;
+						padding: 0;
+						border-radius: 50%;
+					}
+
+					.comment-text {
+						margin: 0 0 0 12px;
+						border-radius: 0;
+						padding: 0;
+						border: none;
+						flex: auto;
+					}
+
+					.star-rating {
+						margin-bottom: 8px;
+					}
+
+					p.meta {
+						margin: 0 0 10px;
+					}
+
+					.woocommerce-review__author {
+						display: block;
+						font-weight: 400;
+						@include font-size(20/16);
+						color: $color__dark;
+					}
+
+					.woocommerce-review__dash {
+						display: none;
+					}
+
+					.woocommerce-review__published-date {
+						@include font-size(14/16);
+						color: $color__gray;
+						font-weight: 400;
+					}
+
+					.description p {
+						margin-bottom: 0;
+						@include font-size(14/16);
+						color: $color__dark;
+					}
+
+					&:last-child {
+						border-bottom: none;
+						margin-bottom: 0;
+					}
+				}
+			}
+
+			.star-rating {
+				--em-rating-spacing: 4px;
+
+				@include font-size(14/16);
+				overflow: visible;
+
+				span {
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
+
+			.ecomus-form-review {
+				&:not(:hover) {
+					border-color: $color__dark;
+				}
+			}
+
+			.woocommerce-noreviews {
+				margin: 0;
+				font-weight: 400;
+				color: $color__gray;
+				padding: 0;
+				background-color: transparent;
+			}
+		}
+	}
+}
+
+.ecomus-review-form-wrapper {
+	.comment-respond {
+		margin: 0;
+		padding: 0;
+
+		.comment-form {
+			text-align: left;
+
+			label {
+				@include font-size(14/16);
+				font-weight: 500;
+				color: $color__dark;
+				text-transform: capitalize;
+			}
+
+			p.stars {
+				margin: 10px 0;
+				padding: 0;
+
+				a {
+					position: relative;
+					display: inline-block;
+					padding: 0;
+					color: #DCDCDC;
+					font-size: 0;
+					text-indent: 0;
+					margin-right: 5px;
+					overflow: hidden;
+
+					span {
+						@include font-size(30/16);
+					}
+
+					&::before {
+						display: block;
+						content: '';
+
+						mask-image: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjM1IiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzUgMzIiPgo8cGF0aCBkPSJNMTcuNDU4IDI1LjMxNGwxMC4wNDIgNi4wNjEtMi42NjUtMTEuNDI0IDguODcyLTcuNjg2LTExLjY4NC0wLjk5MS00LjU2Ni0xMC43NzQtNC41NjYgMTAuNzc0LTExLjY4NCAwLjk5MSA4Ljg3MyA3LjY4Ni0yLjY2NSAxMS40MjQgMTAuMDQzLTYuMDYxeiI+PC9wYXRoPgo8L3N2Zz4K");
+						mask-repeat: no-repeat;
+						mask-size: 100%;
+						-webkit-mask-image: url("data:image/svg+xml;base64,PCEtLSBHZW5lcmF0ZWQgYnkgSWNvTW9vbi5pbyAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjM1IiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzUgMzIiPgo8cGF0aCBkPSJNMTcuNDU4IDI1LjMxNGwxMC4wNDIgNi4wNjEtMi42NjUtMTEuNDI0IDguODcyLTcuNjg2LTExLjY4NC0wLjk5MS00LjU2Ni0xMC43NzQtNC41NjYgMTAuNzc0LTExLjY4NCAwLjk5MSA4Ljg3MyA3LjY4Ni0yLjY2NSAxMS40MjQgMTAuMDQzLTYuMDYxeiI+PC9wYXRoPgo8L3N2Zz4K");
+						-webkit-mask-repeat: no-repeat;
+						-webkit-mask-size: 100%;
+						background-color: #DCDCDC;
+						width: 30px;
+						height: 30px;
+
+						transition: .4s;
+					}
+
+					&:hover ~ a {
+						color: #DCDCDC;
+
+						&::before {
+							background-color: #DCDCDC;
+						}
+					}
+				}
+
+				&:hover {
+					a {
+						color: #111110;
+
+						&::before {
+							background-color: #111110;
+						}
+					}
+				}
+
+				&.selected {
+					a {
+						&.active {
+							color: #111110;
+
+							&::before {
+								background-color: #111110;
+							}
+
+							~ a {
+								color: #DCDCDC;
+
+								&::before {
+									background-color: #DCDCDC;
+								}
+							}
+						}
+
+						&:not(.active) {
+							color: #111110;
+
+							&::before {
+								background-color: #111110;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.comment-reply-title {
+			@include font-size(28/16);
+			font-weight: 500;
+			display: block;
+			margin-bottom: 16px;
+			text-transform: inherit;
+		}
+
+		.comment-notes {
+			display: block;
+			@include font-size(16/16);
+			color: $color__dark;
+		}
+
+		.comment-form-rating {
+			padding: 0 15px;
+		}
+
+		.comment-form-author {
+			width: 50%;
+			float: left;
+			padding-right: 15px;
+		}
+
+		.comment-form-email {
+			width: 50%;
+			padding-left: 15px;
+			float: left;
+			margin-bottom: 18px;
+		}
+
+		.comment-form-cookies-consent,
+		.form-submit {
+			clear: bottom;
+		}
+
+		.comment-form-cookies-consent {
+			label {
+				text-transform: inherit;
+			}
+		}
+
+		.form-submit {
+			margin-top: 20px;
+			margin-bottom: 0;
+
+			.submit {
+				min-width: 150px;
+			}
+		}
+	}
+
+	.ecomus-review-form__content {
+		--em-modal-container-padding: 52px 32px 32px 32px;
+
+		margin: 0;
+	}
+
+	.ecomus-review-form-wrapper__close {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+
+		&:hover {
+			color: #db1215;
+		}
+	}
+}

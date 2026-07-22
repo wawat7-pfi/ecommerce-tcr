@@ -1,0 +1,14 @@
+.cross-sells__heading {
+    margin-top: 0;
+}
+
+.ecomus-products-carousel--elementor {
+    .cross-sells {
+        margin: 0;
+
+        &:not(.swiper-initialized) {
+            overflow: hidden;
+            display: block;
+        }
+    }
+}

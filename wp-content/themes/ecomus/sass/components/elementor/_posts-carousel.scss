@@ -1,0 +1,18 @@
+.ecomus-posts-carousel {
+	.em-post-grid {
+		.post-thumbnail,
+		.entry-title {
+			margin-bottom: 30px;
+		}
+	}
+
+	.entry-title {
+		a {
+			display: -webkit-box;
+			-webkit-line-clamp: var(--em-line-clamp-count, 'none');
+			-webkit-box-orient: vertical; 
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+	}
+}

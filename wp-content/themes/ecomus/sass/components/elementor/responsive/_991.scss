@@ -1,0 +1,62 @@
+@media (max-width: 991px) and (min-width: 768px) {
+	.ecomus-lookbook__product-type--carousel {
+        .ecomus-lookbook-products__wrapper {
+            padding-left: 40px;
+            padding-right: 0;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+	.ecomus-testimonial__gallery-content {
+        padding-top: 0;
+    }
+
+
+    // Countdown
+    .ecomus-time-countdown--1 {
+        .timer{
+            padding: 7px 0 6px;
+            min-width: 70px;
+        }
+
+        .digits{
+            @include font-size(26/16);
+        }
+    }
+
+    // Categories carousel
+    .ecomus-categories-carousel__heading {
+        margin-bottom: 50px;
+
+        h4 {
+            @include font-size(32/16);
+        }
+    }
+
+    // Product carousel
+    .ecomus-products-carousel__heading-display-between {
+        h4 {
+            @include font-size(32/16);
+        }
+    }
+
+    // Flash Sale
+    .ecomus-flash-sale-carousel {
+        padding: 60px 20px 20px;
+    }
+
+    .ecomus-flash-sale-carousel__title {
+        gap: 10px;
+        padding: 4px 16px;
+        margin-left: 15px;
+
+        h4 {
+            @include font-size(32/16);
+        }
+
+        .ecomus-svg-icon {
+            @include font-size(31/16);
+        }
+    }
+}

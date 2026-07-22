@@ -1,0 +1,219 @@
+.elementor-widget-ecomus-testimonial-carousel-2 {
+    .elementor-widget-container {
+        .swiper-button {
+            &.elementor-swiper-button-prev {
+                left: -82px;
+                right: auto;
+            }
+
+            &.elementor-swiper-button-next {
+                right: -82px;
+                left: auto;
+            }
+        }
+    }
+}
+
+.ecomus-testimonial-carousel-2__item {
+    padding: 44px 36px 24px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border: 1px solid #eee;
+        pointer-events: none;
+    }
+
+    &:hover {
+        .ecomus-testimonial-carousel-2__product-button {
+            opacity: 1;
+        }
+    }
+
+    &[data-image="true"] {
+        display: flex;
+        gap: 34px;
+        height: auto;
+    }
+}
+
+.ecomus-testimonial-carousel-2__image {
+    --em-image-rounded: 5px;
+
+    width: 100%;
+    max-width: 244px;
+    overflow: hidden;
+
+    img {
+        height: 100% !important;
+        object-fit: cover;
+    }
+}
+
+.ecomus-testimonial-carousel-2__rating {
+    margin-bottom: 16px;
+
+    &.star-rating {
+        --em-rating-spacing: 6px;
+
+        @include font-size(1);
+
+        .user-rating {
+            color: #ff7b54;
+        }
+    }
+}
+
+.ecomus-testimonial-carousel-2__title {
+    @include font-size(18/16);
+    color: var(--em-color__dark);
+    margin-bottom: 8px;
+}
+
+.ecomus-testimonial-carousel-2__content {
+    @include font-size(18/16);
+    color: var(--em-color__dark);
+    margin-bottom: 26px;
+}
+
+.ecomus-testimonial-carousel-2__name {
+    color: var(--em-color__dark);
+}
+
+.ecomus-testimonial-carousel-2__text {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--em-color__dark);
+    margin-bottom: 34px;
+}
+
+.ecomus-testimonial-carousel-2__text-icon {
+    @include font-size(16/16);
+}
+
+.ecomus-testimonial-carousel-2__product {
+    gap: 20px;
+    padding-top: 23px;
+    border-top: 1px solid #eee;
+}
+
+.ecomus-testimonial-carousel-2__product-image {
+    max-width: 64px;
+}
+
+.elementor .elementor-element {
+    .ecomus-testimonial-carousel-2__product-image {
+        img {
+            border-radius: var(--em-image-rounded-product-card-small);
+        }
+    }
+}
+
+.ecomus-testimonial-carousel-2__product-summary {
+    flex-basis: 100%;
+}
+
+.ecomus-testimonial-carousel-2__product-title {
+    @include font-size(14/16);
+    color: var(--em-color__dark);
+    margin: 0;
+}
+
+.ecomus-testimonial-carousel-2__product-price {
+    @include font-size(14/16);
+    font-weight: 600;
+    line-height: 16.8px;
+    color: $color__dark;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 0;
+
+    .woocs_price_code {
+        display: flex;
+        gap: 5px;
+    }
+
+    ins {
+        color: #DB1215;
+        background-color: transparent;
+        margin-left: 5px;
+    }
+
+    del {
+        color: rgba( $color__dark, 0.5 );
+    }
+
+    > .woocommerce-Price-amount {
+        margin-left: 5px;
+        margin-right: 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .woocommerce-price-suffix {
+        order: 3;
+        margin-left: 5px;
+    }
+}
+
+.ecomus-testimonial-carousel-2__product-button {
+    display: inline-flex;
+    max-width: 40px;
+    height: 40px;
+    flex-basis: 100%;
+    @include font-size(9/16);
+    color: var(--em-color__dark);
+    border: 1px solid var(--em-color__dark);
+    border-radius: 100%;
+    opacity: 0;
+    transition: .4s;
+
+    /*rtl:raw:
+        transform: rotateY(180deg);
+    */
+
+    &:hover {
+        color: var(--em-color__light);
+        background-color: var(--em-color__dark);
+    }
+}
+
+.elementor-widget-ecomus-testimonial-carousel-2 {
+    &:hover {
+        .swiper-button {
+            opacity: 1;
+        }
+    }
+
+    .swiper-button {
+		opacity: 0;
+
+        /*rtl:raw:
+			transform: rotateY(180deg) translateY(-50%);
+		*/
+	}
+}
+
+.ecomus-testimonial__navigation-position--bottom {
+	.swiper-button {
+        --em-arrow-top: 40px;
+		margin-top: var(--em-arrow-top);
+		position: unset;
+        opacity: 1;
+	}
+
+	.elementor-swiper-button-next {
+		margin-left: 8px;
+	}
+}

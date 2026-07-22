@@ -1,0 +1,118 @@
+.ecomus-product-grid {
+    .woocommerce-pagination-button {
+        --em-button-padding-left: 30px;
+        --em-button-padding-right: 30px;
+        --em-button-padding-top: 14px;
+        --em-button-padding-bottom: 14px;
+    }
+}
+
+.ecomus-product-grid-align--center {
+	ul.products {
+		li.product {
+			.product-summary {
+				text-align: center;
+
+                > * {
+                    justify-content: center;
+                }
+
+				.product-variation-items {
+					display: inline-flex;
+				}
+			}
+		}
+	}
+}
+
+.ecomus-product-grid-align--right {
+	ul.products {
+		li.product {
+			.product-summary {
+				text-align: right;
+
+				> * {
+					justify-content: flex-end;
+				}
+
+				.product-variation-items {
+					display: inline-flex;
+				}
+			}
+		}
+	}
+}
+
+.ecomus-products-grid-border-yes {
+	ul.products {
+        --em-products-grid-border: #ececec;
+
+        border-left: 1px solid var(--em-products-grid-border);
+
+		li.product {
+            margin-top: -1px;
+            position: relative;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border-top: 1px solid var(--em-products-grid-border);
+                    border-bottom: 1px solid var(--em-products-grid-border);
+                    border-right: 1px solid var(--em-products-grid-border);
+                }
+
+            .product-inner {
+                padding: 15px;
+            }
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+    @for $i from 2 through 6 {
+        .ecomus-product-columns--#{$i} {
+            &.ecomus-product-grid {
+                ul.products {
+                    li.product {
+                        $columns__margin: 0;
+                        @include column-width( $i, $columns__margin );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1199px) and ( min-width: 768px) {
+    @for $i from 2 through 6 {
+        .ecomus-product-columns-tablet--#{$i} {
+            &.ecomus-product-grid {
+                ul.products {
+                    li.product {
+                        $columns__margin: 0;
+                        @include column-width( $i, $columns__margin );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    @for $i from 2 through 6 {
+        .ecomus-product-columns-mobile--#{$i} {
+            &.ecomus-product-grid {
+                ul.products {
+                    li.product {
+                        $columns__margin: 0;
+                        @include column-width( $i, $columns__margin );
+                    }
+                }
+            }
+        }
+    }
+}

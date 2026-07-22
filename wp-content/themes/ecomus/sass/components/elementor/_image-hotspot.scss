@@ -1,0 +1,216 @@
+.ecomus-image-hotspot {
+}
+
+.ecomus-image-hotspot__image {
+    --em-image-rounded: 10px;
+}
+
+.ecomus-image-hotspot__product {
+    top: 40%;
+    left: 40%;
+    cursor: pointer;
+
+    &.active{
+        .ecomus-image-hotspot__product-inner {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .ecomus-image-hotspot__arrow {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+}
+
+.ecomus-image-hotspot__product-inner {
+    display: inline-flex;
+    top: -122px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    max-width: 400px;
+    min-width: 334px;
+    gap: 20px;
+    padding: 12px;
+    border-radius: var(--em-rounded-xs);
+    box-shadow: 0 0 15px rgba( 0, 0, 0, .1 );
+    background-color: var(--em-color__light);
+    z-index: 99;
+}
+
+.ecomus-image-hotspot__product-summary {
+    flex-basis: 100%;
+}
+
+.ecomus-image-hotspot__product-image {
+    max-width: 62px;
+
+    &::before {
+        padding-bottom: var(--product-image-ratio-percent);
+    }
+}
+
+.elementor .elementor-element {
+    .ecomus-image-hotspot__product-image {
+        img {
+            border-radius: var(--em-image-rounded-product-card-small);
+        }
+    }
+}
+
+.ecomus-image-hotspot__product-title {
+    @include font-size(1);
+    color: var(--em-color__dark);
+    margin: 0;
+
+    a {
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        overflow: hidden;
+    }
+}
+
+.ecomus-image-hotspot__product-price {
+    display: flex;
+    @include font-size(14/16);
+    font-weight: 600;
+    line-height: 16.8px;
+    color: $color__dark;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    gap: 0;
+
+    .woocs_price_code {
+        display: flex;
+    }
+
+    ins {
+        color: #DB1215;
+        background-color: transparent;
+        margin-left: 10px;
+    }
+
+    del {
+        color: rgba( $color__dark, 0.5 );
+        font-weight: 400;
+    }
+
+    > .woocommerce-Price-amount {
+        margin-left: 5px;
+        margin-right: 5px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    .woocommerce-price-suffix {
+        order: 3;
+        margin-left: 5px;
+    }
+}
+
+.ecomus-image-hotspot__arrow {
+    opacity: 0;
+    top: -24px;
+    left: 50%;
+    transform: translate( -50%, 0 );
+    z-index: 98;
+
+    &::before {
+        pointer-events: none;
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background-color: var(--em-color__light);
+        transform: rotate(45deg);
+    }
+}
+
+.ecomus-image-hotspot__button {
+    --em-button-color: #000000;
+    --em-button-bg-color: #f2f2f2;
+    --em-button-border-color: transparent;
+    --em-button-color-hover: #000000;
+    --em-button-bg-color-hover: #f2f2f2;
+    --em-button-border-color-hover: transparent;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+    border: none;
+    border-radius: 100%;
+    background-color: #f2f2f2;
+    overflow: visible;
+
+    span {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        background-color: var(--em-color__dark);
+        border-radius: 100%;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        border-radius: 100%;
+    }
+
+    &::after {
+        display: none;
+        animation: none !important;
+    }
+
+    &:hover {
+        &::before {
+            animation: ripple 3s infinite;
+            animation-delay: 0.5s;
+        }
+    }
+}
+
+.ecomus-image-hotspot__quickview {
+    padding: 0;
+	max-width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    flex-basis: 100%;
+
+    .ecomus-svg-icon {
+        margin: 0;
+        @include font-size(19/16);
+    }
+
+    &.loading {
+        @include em-loading();
+
+        .ecomus-svg-icon {
+            opacity: 0;
+        }
+    }
+
+    &.em-button-light {
+        --em-button-bg-color: #f2f2f2;
+    }
+}
+
+.popover__content.image-hotspot-content {
+    gap: 10px;
+    padding: 12px;
+}

@@ -1,0 +1,69 @@
+.ecomus-elementor--marquee {
+    overflow: hidden;
+
+    &.ecomus-marquee--hover-stop {
+        &:hover {
+            .ecomus-marquee--inner {
+                animation-play-state: paused;
+            }
+        }
+    }
+}
+
+.ecomus-marquee {
+    padding: 26px 0;
+    background-color: #fcffb2;
+}
+
+.ecomus-marquee--inner {
+    --em-marquee-speed: 15s;
+
+    display: inline-flex;
+    width: fit-content;
+    height: 100%;
+    animation: marquee var(--em-marquee-speed) linear infinite;
+    will-change: transform;
+}
+
+.ecomus-marquee--items {
+    display: inline-flex;
+    width: max-content;
+}
+
+.ecomus-marquee__items {
+    gap: 48px;
+    margin-right: 48px;
+}
+
+.ecomus-marquee--duplicate {
+    --em-marquee-index: 1;
+
+    inset-inline-start: calc( -100% * var(--em-marquee-index) * -1 );
+}
+
+.ecomus-marquee__item {
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.ecomus-marquee__icon {
+    display: inline-flex;
+    align-items: center;
+    @include font-size(24/16);
+}
+
+.ecomus-marquee__text {
+    @include font-size(24/16);
+    line-height: 1;
+    color: var(--em-color__dark);
+    white-space: nowrap;
+
+    a {
+        display: inline-block;
+        border-bottom: 1px solid;
+
+        &:hover {
+            color: var(--em-color__dark);
+        }
+    }
+}

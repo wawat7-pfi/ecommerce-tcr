@@ -1,0 +1,95 @@
+.blog-grid {
+    .site-main {
+		.em-post-grid:not(:last-child) {
+            margin-bottom: 40px;
+		}
+    }
+
+	.site-content {
+		padding-top: 35px;
+		padding-bottom: 75px;
+	}
+}
+
+.em-blog-sidebar {
+	.site-content {
+		padding-top: 50px;
+		padding-bottom: 75px;
+	}
+
+	&.blog-classic {
+		.site-main {
+			.em-post-grid {
+				margin-bottom: 54px;
+
+				&:nth-child(3n+1) {
+					flex: 0 0 100%;
+					max-width: 100%;
+
+					.post-thumbnail {
+						max-height: 625px;
+					}
+				}
+			}
+		}
+	}
+
+	&:not(.blog-classic) {
+		.site-main {
+			.em-post-grid {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
+
+.blog-list {
+	.site-content {
+		padding-top: 65px;
+		padding-bottom: 75px;
+	}
+	.site-main {
+		.em-post-list:not(:last-child) {
+			margin-bottom: 38px;
+		}
+
+		&.em-row {
+			flex-direction: column;
+		}
+
+		.em-button-category {
+			--em-badge-color: #000000;
+			--em-badge-color-hover: var(--em-color__primary);
+			--em-badge-bg-color: transparent;
+			--em-badge-bg-color-hover: transparent;
+			--em-badge-border-color: #EBEBEB;
+			--em-badge-border-color-hover: var(--em-color__primary);
+			border: 1px solid var(--em-badge-border-color);
+
+			&:hover {
+				border-color: var(--em-badge-border-color-hover);
+			}
+
+			&:after {
+				display: none;
+			}
+		}
+	}
+}
+
+.blog-sidebar {
+	.post-thumbnail,
+	.post-thumbnail img {
+		border-radius: var(--em-image-rounded-post-card-small);
+	}
+
+	.ecomus-instagram__item {
+		a,
+		img {
+			display: block;
+			border-radius: var(--em-image-rounded-post-card-small );
+		}
+	}
+}
