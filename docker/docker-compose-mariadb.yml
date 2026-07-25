@@ -18,6 +18,13 @@ services:
       interval: 10s
       timeout: 5s
       retries: 12
+    networks:
+      - wp_network
 
 volumes:
   db_data:
+
+networks:
+  wp_network:
+    external: true
+    name: wordpress_default

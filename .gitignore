@@ -46,6 +46,9 @@
 # Ignore mu-plugins (biasanya auto-generated)
 /wp-content/mu-plugins/
 
+# Ignore All-in-One WP Migration backups
+/wp-content/ai1wm-backups/
+
 # =========================
 # Plugins - ignore semua, track hanya yang custom
 # =========================

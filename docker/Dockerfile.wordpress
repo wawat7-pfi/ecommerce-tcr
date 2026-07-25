@@ -1,0 +1,8 @@
+FROM wordpress:php8.3-apache
+
+# Install PHP Redis extension
+RUN pecl install redis \
+    && docker-php-ext-enable redis
+
+# Verify installation
+RUN php -m | grep redis

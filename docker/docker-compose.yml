@@ -1,10 +1,15 @@
 services:
   wordpress:
-    image: wordpress:php8.3-apache
+    build:
+      context: .
+      dockerfile: Dockerfile.wordpress
     container_name: wp_app
     restart: unless-stopped
+    depends_on:
+      redis:
+        condition: service_healthy
     ports:
-      - "80:80"
+      - "8080:80"
     environment:
       WORDPRESS_DB_HOST: wp_db:3306
       WORDPRESS_DB_USER: wp_user
@@ -21,43 +26,33 @@ services:
     networks:
       - wp_network
 
-  elasticsearch:
-    image: elasticsearch:8.17.0
-    container_name: wp_elasticsearch
+  redis:
+    image: redis:7-alpine
+    container_name: wp_redis
     restart: unless-stopped
-    environment:
-      - discovery.type=single-node
-      - xpack.security.enabled=false
-      - xpack.security.enrollment.enabled=false
-      - ES_JAVA_OPTS=-Xms512m -Xmx512m
+    command: >
+      redis-server
+      --maxmemory 256mb
+      --maxmemory-policy allkeys-lru
+      --save 60 1000
+      --save 300 100
+      --loglevel warning
+      --tcp-keepalive 60
+      --timeout 300
     volumes:
-      - es_data:/usr/share/elasticsearch/data
+      - redis_data:/data
     ports:
-      - "9200:9200"
+      - "6379:6379"
     healthcheck:
-      test: ["CMD-SHELL", "curl -fsSL http://localhost:9200/_cluster/health || exit 1"]
+      test: ["CMD", "redis-cli", "ping"]
       interval: 10s
       timeout: 5s
-      retries: 12
-    networks:
-      - wp_network
-
-  kibana:
-    image: kibana:8.17.0
-    container_name: wp_kibana
-    restart: unless-stopped
-    depends_on:
-      elasticsearch:
-        condition: service_healthy
-    environment:
-      - ELASTICSEARCH_HOSTS=http://wp_elasticsearch:9200
-    ports:
-      - "5601:5601"
+      retries: 5
     networks:
       - wp_network
 
 volumes:
-  es_data:
+  redis_data:
 
 networks:
   wp_network:
