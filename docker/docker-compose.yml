@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.wordpress
-    container_name: wp_app
+    container_name: tcr_app
     restart: unless-stopped
     depends_on:
       redis:
