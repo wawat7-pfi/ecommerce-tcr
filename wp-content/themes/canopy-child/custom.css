@@ -32,6 +32,9 @@
 .header-transparent .site-header__section{
 	position:relative;
 }
+.site-header__desktop .header-main {
+    height: 60px;
+}
 .header-sticky .site-header__container.em-container {
     position: fixed;
     
