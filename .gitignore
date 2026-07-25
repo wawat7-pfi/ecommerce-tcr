@@ -26,7 +26,7 @@
 # WordPress Config
 # =========================
 # wp-config.php berisi credentials, JANGAN commit
-/wp-config.php
+# /wp-config.php
 
 # =========================
 # wp-content
@@ -43,8 +43,8 @@
 # Ignore jetpack WAF (auto-generated)
 /wp-content/jetpack-waf/
 
-# Ignore mu-plugins (biasanya auto-generated)
-/wp-content/mu-plugins/
+# Track mu-plugins (berisi Redis FPC & Custom Core Logic)
+# /wp-content/mu-plugins/
 
 # Ignore All-in-One WP Migration backups
 /wp-content/ai1wm-backups/
