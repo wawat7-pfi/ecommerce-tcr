@@ -16,6 +16,7 @@ services:
       WORDPRESS_DB_PASSWORD: ${DB_PASSWORD}
       WORDPRESS_DB_NAME: wordpress
       WORDPRESS_TABLE_PREFIX: cnp_
+      WORDPRESS_REDIS_HOST: tcr_redis
       WORDPRESS_CONFIG_EXTRA: |
         define('FS_METHOD', 'direct');
         define('WP_MEMORY_LIMIT', '512M');
