@@ -9,7 +9,7 @@ services:
       redis:
         condition: service_healthy
     ports:
-      - "8080:80"
+      - "3000:80"
     environment:
       WORDPRESS_DB_HOST: tcr_db:3306
       WORDPRESS_DB_USER: wp_user
@@ -28,7 +28,7 @@ services:
 
   redis:
     image: redis:7-alpine
-    container_name: wp_redis
+    container_name: tcr_redis
     restart: unless-stopped
     command: >
       redis-server --maxmemory 256mb --maxmemory-policy allkeys-lru --save 60 1000 --save 300 100 --loglevel warning --tcp-keepalive 60 --timeout 300
