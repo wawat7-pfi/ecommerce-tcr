@@ -87,7 +87,7 @@ add_action( 'template_redirect', function () {
         $current_host   = $_SERVER['HTTP_HOST'] ?? '';
         $current_scheme = ( ! empty( $_SERVER['HTTPS'] ) && 'on' === $_SERVER['HTTPS'] ) ? 'https' : 'http';
         if ( ! empty( $current_host ) ) {
-            $origins = array( 'tcr-wordpress.test', '206.189.88.126', 'thecanopy-room.com' );
+            $origins = array( '127.0.0.1', 'localhost', 'tcr-wordpress.test', '206.189.88.126', 'thecanopy-room.com' );
             $target  = $current_scheme . '://' . $current_host;
             foreach ( $origins as $origin ) {
                 if ( false === strpos( $html, $origin ) ) {

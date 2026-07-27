@@ -17,7 +17,7 @@ if ( ! empty( $_SERVER['HTTP_HOST'] ) ) {
 	add_filter( 'option_siteurl', function () use ( $dyn ) { return $dyn; } );
 
 	ob_start( function ( $html ) use ( $host, $scheme ) {
-		$origins = array( 'tcr-wordpress.test', '206.189.88.126', 'thecanopy-room.com' );
+		$origins = array( '127.0.0.1', 'localhost', 'tcr-wordpress.test', '206.189.88.126', 'thecanopy-room.com' );
 		$target  = $scheme . '://' . $host;
 		foreach ( $origins as $o ) {
 			if ( strpos( $html, $o ) === false ) { continue; }
