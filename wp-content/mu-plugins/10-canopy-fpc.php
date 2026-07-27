@@ -15,6 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * while allowing regular Customers and Guests to enjoy Full-Page Caching.
  */
 add_action( 'init', function () {
+    if ( wp_doing_ajax() || headers_sent() ) {
+        return;
+    }
     if ( is_user_logged_in() && current_user_can( 'manage_options' ) ) {
         if ( empty( $_COOKIE['canopy_admin'] ) ) {
             setcookie( 'canopy_admin', '1', time() + 86400 * 30, COOKIEPATH, COOKIE_DOMAIN, is_ssl(), true );

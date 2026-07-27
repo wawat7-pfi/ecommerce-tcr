@@ -49,8 +49,8 @@ define( 'DB_USER', getenv_docker('WORDPRESS_DB_USER', 'root') );
 /** Database password */
 define( 'DB_PASSWORD', getenv_docker('WORDPRESS_DB_PASSWORD', '') );
 
-/** Database hostname */
-define( 'DB_HOST', getenv_docker('WORDPRESS_DB_HOST', 'localhost') );
+$raw_db_host = getenv_docker('WORDPRESS_DB_HOST', '127.0.0.1');
+define( 'DB_HOST', ($raw_db_host === 'localhost' && strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') ? '127.0.0.1' : $raw_db_host );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', getenv_docker('WORDPRESS_DB_CHARSET', 'utf8mb4') );
