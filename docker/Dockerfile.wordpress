@@ -9,6 +9,9 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
 
+# Copy Apache header limits configuration (Fixes Response Headers Too Big error)
+COPY apache-limits.conf /etc/apache2/conf-enabled/limits.conf
+
 # Copy custom entrypoint script
 COPY entrypoint.sh /usr/local/bin/custom-entrypoint.sh
 RUN chmod +x /usr/local/bin/custom-entrypoint.sh
